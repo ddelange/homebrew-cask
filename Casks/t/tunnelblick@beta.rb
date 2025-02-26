@@ -1,6 +1,6 @@
 cask "tunnelblick@beta" do
-  version "6.0beta11,6150"
-  sha256 "59a6851109f842df9461addf158a7fe35af824491690a2f5c188b75064559ebf"
+  version "6.1beta2,6180"
+  sha256 "4619513160824205409a3c6fb0049e6daf50a0f21f1e0aab47731ecdc16295b1"
 
   url "https://tunnelblick.net/iprelease/Tunnelblick_#{version.csv.first}_build_#{version.csv.second}.dmg"
   name "Tunnelblick"
@@ -19,7 +19,7 @@ cask "tunnelblick@beta" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :ventura"
 
   app "Tunnelblick.app"
 

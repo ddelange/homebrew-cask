@@ -39,6 +39,7 @@ affinity-designer
 affinity-photo
 affinity-publisher
 aide-app
+airdroid
 airflow
 airtame
 akiflow
@@ -287,6 +288,7 @@ dataflare
 datagrip
 dataspell
 datovka
+davmail
 dbeaver-community
 dbgate
 dbschema
@@ -345,6 +347,7 @@ double-commander
 douyin
 douyin-chat
 downie
+doxie
 drata-agent
 draw-things
 drawio
@@ -602,6 +605,7 @@ inso
 inso@beta
 insomnia
 insomnia@alpha
+insta360-studio
 integrity
 intellij-idea
 intellij-idea-ce
@@ -748,6 +752,7 @@ marked
 markedit
 marsedit
 mattermost
+mcbopomofo
 mcreator
 mdrp
 media-center
@@ -794,6 +799,7 @@ milanote
 millie
 mimestream
 mindmac
+mindmaster-cn
 minecraft-education
 minecraft-server
 mini-program-studio
@@ -969,6 +975,7 @@ ovito-pro
 p4
 p4v
 pagico
+paletro
 panoply
 parallels
 parallels-virtualization-sdk
@@ -1392,6 +1399,7 @@ trunk-io
 tuist
 tunetag
 tunnelbear
+tunnelblick
 tunnelblick@beta
 tuple
 turbotax-2024

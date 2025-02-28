@@ -39,6 +39,7 @@ affinity-designer
 affinity-photo
 affinity-publisher
 aide-app
+airdroid
 airflow
 airtame
 akiflow
@@ -287,6 +288,7 @@ dataflare
 datagrip
 dataspell
 datovka
+davmail
 dbeaver-community
 dbgate
 dbschema
@@ -345,6 +347,7 @@ double-commander
 douyin
 douyin-chat
 downie
+doxie
 drata-agent
 draw-things
 drawio
@@ -390,6 +393,7 @@ epic-games
 eset-cyber-security
 evernote
 excalidrawz
+expo-orbit
 expressvpn
 fantastical
 far2l
@@ -602,6 +606,7 @@ inso
 inso@beta
 insomnia
 insomnia@alpha
+insta360-studio
 integrity
 intellij-idea
 intellij-idea-ce
@@ -666,6 +671,7 @@ kkbox
 knime
 kopiaui
 krisp
+kunkun
 label-live
 lagrange
 langgraph-studio
@@ -728,6 +734,7 @@ lyricsfinder
 maa
 macai
 maccy
+macdroid
 macfuse
 macfuse@dev
 macloggerdx
@@ -748,12 +755,14 @@ marked
 markedit
 marsedit
 mattermost
+mcbopomofo
 mcreator
 mdrp
 media-center
 mediahuman-youtube-downloader
 mediainfo
 mediamate
+mediathekview
 mega
 megasync
 mellel
@@ -794,6 +803,7 @@ milanote
 millie
 mimestream
 mindmac
+mindmaster-cn
 minecraft-education
 minecraft-server
 mini-program-studio
@@ -969,6 +979,7 @@ ovito-pro
 p4
 p4v
 pagico
+paletro
 panoply
 parallels
 parallels-virtualization-sdk
@@ -1392,6 +1403,7 @@ trunk-io
 tuist
 tunetag
 tunnelbear
+tunnelblick
 tunnelblick@beta
 tuple
 turbotax-2024
@@ -1498,6 +1510,7 @@ wing-personal
 wins
 wire
 wirecast
+wiso-steuer-2024
 wiso-steuer-2025
 wizcli
 wljs-notebook
@@ -1516,6 +1529,7 @@ xiaomi-cloud
 xiv-on-mac
 xliff-editor
 xmind
+xmind@beta
 xmplify
 xnconvert
 xnviewmp

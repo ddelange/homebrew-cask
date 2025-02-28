@@ -1,6 +1,6 @@
 cask "macwhisper" do
-  version "11.8,1180"
-  sha256 "3727d6057352a6ba6be7433da1ce5893a5d1ff9fb7a1e2e23fdb7bb1440ee8ad"
+  version "11.10.1,1198"
+  sha256 "fa1a6b3cf967447a073a95528de325abe32202475b0b0f6cee021775b2872851"
 
   url "https://stickytimers.app/macwhisper/MacWhisper-#{version.csv.second}.zip",
       verified: "stickytimers.app/macwhisper/"

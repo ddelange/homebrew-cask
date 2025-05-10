@@ -1,9 +1,9 @@
 cask "figma@beta" do
   arch arm: "mac-arm", intel: "mac"
 
-  version "125.4.7"
-  sha256 arm:   "2442cb678da2a1d634ad4f5950d30bd894b784e569a27d8faadddf958eb97086",
-         intel: "3e601af66042444d400fc5b3525ced52288440d54c0f269398bc1c1027718062"
+  version "125.5.2"
+  sha256 arm:   "3aec340c416961e3ec4df79d61d5d517349ea6783f059fa01c1d33724c6c2f5a",
+         intel: "96f60c68aea3885969815ded37deb91dcd6ae378c209caf7ffa70196150e0453"
 
   url "https://desktop.figma.com/#{arch}/beta/FigmaBeta-#{version}.zip"
   name "Figma Beta"

@@ -41,10 +41,12 @@ affinity-photo
 affinity-publisher
 agent-tars
 aide-app
+aifun
 airdroid
 airflow
 airtame
 akiflow
+akuity
 alcom
 alcove
 aldente
@@ -89,9 +91,11 @@ app-cleaner
 apparency
 appcleaner
 appflowy
+applite
 aptakube
 aptible
 aqua
+aqua-voice
 arc
 archipelago
 archivewebpage
@@ -124,6 +128,7 @@ badgeify
 badlion-client
 baidunetdisk
 balenaetcher
+bambu-connect
 banana-cake-pop
 bananas
 banking-4
@@ -184,6 +189,7 @@ bricklink-studio
 brickstore
 bridge
 brightvpn
+browser-actions
 browser-deputy
 browserosaurus
 browserstacklocal
@@ -237,6 +243,7 @@ cinderella
 cisco-jabber
 cisdem-data-recovery
 cisdem-pdf-converter-ocr
+citrix-workspace
 cityofzion-neon
 clash-verge-rev
 claude
@@ -279,6 +286,7 @@ companion@beta
 compositor
 confluent-cli
 connect-fonts
+consul
 contour
 cookie
 copilot
@@ -309,6 +317,7 @@ crystalviewer
 cura-lulzbot
 curseforge
 cursor
+cutter
 cyberduck
 cycling74-max
 daedalus-mainnet
@@ -440,10 +449,12 @@ entry
 epic-games
 eset-cyber-security
 espanso
+etrecheckpro
 evernote
 excalidrawz
 expo-orbit
 expressvpn
+extraterm
 fantastical
 far2l
 fastrawviewer
@@ -491,6 +502,7 @@ flox
 flutter
 flutterflow
 fly
+flycast
 flyenv
 fmail2
 focu
@@ -500,6 +512,7 @@ focusrite-control-2
 folding-at-home@beta
 foldit
 folo
+font-0xproto
 font-chiron-hei-hk
 font-chiron-sung-hk
 font-elstobd
@@ -533,6 +546,7 @@ font-iosevka-ss17
 font-iosevka-ss18
 font-jetbrains-maple-mono
 font-jetbrains-maple-mono-nf
+font-juliamono
 font-lxgw-neoxihei
 font-lxgw-neozhisong
 font-lxgw-simxihei
@@ -597,6 +611,7 @@ geogebra@5
 geotag
 geph
 get-api
+get-iplayer-automator
 ghost-browser
 ghostty
 ghostty@tip
@@ -699,6 +714,7 @@ imhex
 inav-configurator
 inkdown
 inkdrop
+inmusic-software-center
 input-source-pro
 inso
 inso@beta
@@ -748,6 +764,7 @@ jottacloud
 jprofiler
 julia
 julia@lts
+jump
 jump-desktop-connect
 jumpcloud-password-manager
 jumpshare
@@ -755,6 +772,7 @@ jupyterlab
 juxtacode
 jyutping
 k6-studio
+k8studio
 kaleidoscope
 kando
 katalon-studio
@@ -765,6 +783,7 @@ kdrive
 keepassxc
 keepassxc@snapshot
 keeper-password-manager
+keet
 keka
 keka@beta
 keyboard-cowboy
@@ -784,6 +803,7 @@ knime
 kodelife
 kopiaui
 kotlin-native
+kreya
 krisp
 kunkun
 label-live
@@ -854,6 +874,7 @@ maccy
 macdroid
 macfuse
 macfuse@dev
+macgamestore
 macloggerdx
 macloggerdx@beta
 macpilot
@@ -878,6 +899,7 @@ marginnote
 marked
 markedit
 marsedit
+marvin
 mathpix-snipping-tool
 mattermost
 mcbopomofo
@@ -900,6 +922,7 @@ mendeley-reference-manager
 menubarx
 meridiem
 merlin-project
+meru
 messenger
 meta-quest-developer-hub
 metashape
@@ -981,6 +1004,7 @@ motion
 motu-m-series
 mountain-duck
 mouseless
+mouseless@preview
 mp3tag
 mplab-xc32
 mqttx
@@ -1003,6 +1027,7 @@ mutedeck
 mweb-pro
 nagstamon
 name-mangler
+nao
 naps2
 native-access
 naver-whale
@@ -1015,6 +1040,7 @@ navicat-for-sqlite
 navicat-premium
 navicat-premium-lite
 navigraph-charts
+neo-network-utility
 neofinder
 neohtop
 neovide
@@ -1067,6 +1093,7 @@ olympus
 omnifocus
 omnigraffle
 omnioutliner
+omniplan
 onecast
 onedrive
 onekey
@@ -1115,6 +1142,7 @@ outline
 outline-manager
 output-factory
 overlayed
+ovice
 ovito
 ovito-pro
 oxygen-xml-developer
@@ -1167,8 +1195,10 @@ plover
 plus42-binary
 plus42-decimal
 pocket-casts
+podman-desktop
 podpisuj
 poe
+poedit
 pokemon-tcg-live
 poker-copilot
 polymail
@@ -1234,6 +1264,7 @@ qlab
 qlc+
 qlmarkdown
 qlvideo
+qobuz
 qownnotes
 qq
 qqlive
@@ -1296,6 +1327,7 @@ restic-browser
 retcon
 retrobatch
 reveal
+reverso
 rhino
 ricochet-refresh
 rider
@@ -1324,6 +1356,7 @@ royal-tsx@beta
 rstudio
 rstudio@daily
 rubymine
+runjs
 rustdesk
 rustrover
 sabnzbd
@@ -1395,8 +1428,6 @@ sketch
 sketch@beta
 sketchup
 skim
-skype
-skype@preview
 slab
 slack
 slack-cli
@@ -1481,6 +1512,7 @@ supremo
 surfshark
 surge
 sweet-home3d
+swift-shift
 swiftformat-for-xcode
 swish
 sync
@@ -1497,9 +1529,9 @@ tableau-reader
 tableflip
 tableplus
 tabtab
-tageditor
 tagspaces
 tailscale
+tandem
 taskade
 taskbar
 tastytrade
@@ -1575,6 +1607,7 @@ touch-portal
 touchdesigner
 touchosc
 tower
+tqsl
 trader-workstation
 tradingview
 trae
@@ -1612,6 +1645,7 @@ ueli
 uhk-agent
 ui
 ui-tars
+ukelele
 ultimaker-cura
 ultimate
 ultrastardeluxe
@@ -1653,6 +1687,7 @@ virtualc64
 virtualdj
 virtualhere
 virtualhereserver
+viscosity
 visual-paradigm
 visual-paradigm-ce
 visual-studio-code
@@ -1699,6 +1734,7 @@ whatsapp
 whatsapp@beta
 whatsize
 whimsical
+whoozle-android-file-transfer
 widelands
 wifi-explorer-pro
 wifispoof
@@ -1765,8 +1801,8 @@ zap
 zappy
 zed
 zed@preview
-zen-browser
-zen-browser@twilight
+zen
+zen@twilight
 zeplin
 zettlr
 zight

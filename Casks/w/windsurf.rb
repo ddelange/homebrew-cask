@@ -1,15 +1,15 @@
 cask "windsurf" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.7.3,71eeb18eeed7897bea630fcaba7d37c49c78b05e"
-  sha256 arm:   "5459c2c69b0a424eba26ace76c12ce8d25283027e750bfd52cdd2d5421144bd4",
-         intel: "c29a77c9873408f5b20aac4fcb8f4dfe17039442adcf3837895f7fc0b0b37196"
+  version "1.9.0,fbebfca390b10f7a152fd231f94606109d576e12"
+  sha256 arm:   "2678eff420fcc40901c2a5ec1e2b0c9d7c864964e1bc4a4105804a4c1a5dc7ed",
+         intel: "0112355aba1b6fd07dc666cb8665f7866ab9a7e58faf8ef806db22d96eec79e2"
 
   url "https://windsurf-stable.codeiumdata.com/darwin-#{arch}-dmg/stable/#{version.csv.second}/Windsurf-darwin-#{arch}-#{version.csv.first}.dmg",
       verified: "windsurf-stable.codeiumdata.com/"
   name "Windsurf"
   desc "Agentic IDE powered by AI Flow paradigm"
-  homepage "https://www.codeium.com/windsurf"
+  homepage "https://windsurf.com/editor"
 
   livecheck do
     url "https://windsurf-stable.codeium.com/api/update/darwin-#{arch}-dmg/stable/latest"

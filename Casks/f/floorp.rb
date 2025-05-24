@@ -1,6 +1,6 @@
 cask "floorp" do
-  version "11.25.0"
-  sha256 "76225e9b2e13e72f7ad82b420eb6a7d0e0553b2341d32a68c89e4fadf7f273ab"
+  version "11.26.2"
+  sha256 "f791eec80da5c94f3be75aa33d61ea14e26ee2326c48e9ce29f6afbf0b801345"
 
   url "https://github.com/Floorp-Projects/Floorp/releases/download/v#{version}/floorp-macOS-universal.dmg",
       verified: "github.com/Floorp-Projects/Floorp/"
@@ -9,8 +9,8 @@ cask "floorp" do
   homepage "https://floorp.app/"
 
   livecheck do
-    url "https://floorp.app/en/download"
-    regex(%r{/v?(\d+(?:\.\d+)+)/floorp[._-]macOS[._-]universal\.dmg}i)
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

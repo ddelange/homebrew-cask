@@ -1,6 +1,6 @@
 cask "warcraft-logs-uploader" do
-  version "8.17.1"
-  sha256 "dbed6dfb4b1dbf29bd1a39f08b1d5f941dff6b1ec012fe4bacf7dcae45d6b989"
+  version "8.17.15"
+  sha256 "5cabb48642b5aa2947cb54dc7b72f521d216617e0e93f40baf88c08e428f17e1"
 
   url "https://github.com/RPGLogs/Uploaders-warcraftlogs/releases/download/v#{version}/warcraftlogs-v#{version}.dmg",
       verified: "github.com/RPGLogs/Uploaders-warcraftlogs/"

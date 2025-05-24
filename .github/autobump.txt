@@ -6,6 +6,7 @@
 4k-video-downloader
 4k-video-downloader+
 4k-youtube-to-mp3
+5ire
 86box
 8x8-work
 a-better-finder-attributes
@@ -41,10 +42,12 @@ affinity-photo
 affinity-publisher
 agent-tars
 aide-app
+aifun
 airdroid
 airflow
 airtame
 akiflow
+akuity
 alcom
 alcove
 aldente
@@ -56,6 +59,7 @@ aliworkbench
 almighty
 alt-tab
 altair-graphql-client
+altserver
 amadine
 amazon-chime
 amazon-q
@@ -89,9 +93,11 @@ app-cleaner
 apparency
 appcleaner
 appflowy
+applite
 aptakube
 aptible
 aqua
+aqua-voice
 arc
 archipelago
 archivewebpage
@@ -110,10 +116,12 @@ atomic-wallet
 audacity
 audio-hijack
 audius
+autogram
 automattic-texts
 avast-secure-browser
 aws-vpn-client
 axure-rp
+ayugram
 azure-data-studio
 ba-connected
 babeledit
@@ -124,6 +132,7 @@ badgeify
 badlion-client
 baidunetdisk
 balenaetcher
+bambu-connect
 banana-cake-pop
 bananas
 banking-4
@@ -148,6 +157,7 @@ biglybt
 bike
 bilibili
 binance
+binary-ninja-free
 bing-wallpaper
 bisq
 bit-slicer
@@ -175,6 +185,7 @@ bookmacster@beta
 boosteroid
 box-drive
 box-tools
+brainfm
 brave-browser
 brave-browser@beta
 brave-browser@nightly
@@ -184,6 +195,7 @@ bricklink-studio
 brickstore
 bridge
 brightvpn
+browser-actions
 browser-deputy
 browserosaurus
 browserstacklocal
@@ -191,6 +203,8 @@ bruno
 buckets@beta
 burp-suite
 burp-suite-professional
+burp-suite-professional@early-adopter
+burp-suite@early-adopter
 busycal
 buttercup
 c0re100-qbittorrent
@@ -237,6 +251,7 @@ cinderella
 cisco-jabber
 cisdem-data-recovery
 cisdem-pdf-converter-ocr
+citrix-workspace
 cityofzion-neon
 clash-verge-rev
 claude
@@ -257,6 +272,7 @@ clipbook
 clock-signal
 clockify
 clop
+cloud-pbx
 cloudflare-warp
 cloudflare-warp@beta
 cloudmounter
@@ -279,6 +295,7 @@ companion@beta
 compositor
 confluent-cli
 connect-fonts
+consul
 contour
 cookie
 copilot
@@ -309,6 +326,7 @@ crystalviewer
 cura-lulzbot
 curseforge
 cursor
+cutter
 cyberduck
 cycling74-max
 daedalus-mainnet
@@ -377,7 +395,6 @@ dockside
 dockx
 dogecoin
 dolphin
-dolphin@beta
 dolphin@dev
 dosbox-staging
 dosbox-x
@@ -440,10 +457,12 @@ entry
 epic-games
 eset-cyber-security
 espanso
+etrecheckpro
 evernote
 excalidrawz
 expo-orbit
 expressvpn
+extraterm
 fantastical
 far2l
 fastrawviewer
@@ -491,6 +510,7 @@ flox
 flutter
 flutterflow
 fly
+flycast
 flyenv
 fmail2
 focu
@@ -500,6 +520,7 @@ focusrite-control-2
 folding-at-home@beta
 foldit
 folo
+font-0xproto
 font-chiron-hei-hk
 font-chiron-sung-hk
 font-elstobd
@@ -533,6 +554,7 @@ font-iosevka-ss17
 font-iosevka-ss18
 font-jetbrains-maple-mono
 font-jetbrains-maple-mono-nf
+font-juliamono
 font-lxgw-neoxihei
 font-lxgw-neozhisong
 font-lxgw-simxihei
@@ -597,9 +619,11 @@ geogebra@5
 geotag
 geph
 get-api
+get-iplayer-automator
 ghost-browser
 ghostty
 ghostty@tip
+gimp
 gisto
 git-credential-manager
 gitbutler
@@ -656,6 +680,7 @@ hapigo
 hashbackup
 hazel
 hbuilderx
+hedy
 helio
 helpwire-operator
 heptabase
@@ -699,6 +724,7 @@ imhex
 inav-configurator
 inkdown
 inkdrop
+inmusic-software-center
 input-source-pro
 inso
 inso@beta
@@ -748,6 +774,7 @@ jottacloud
 jprofiler
 julia
 julia@lts
+jump
 jump-desktop-connect
 jumpcloud-password-manager
 jumpshare
@@ -755,6 +782,7 @@ jupyterlab
 juxtacode
 jyutping
 k6-studio
+k8studio
 kaleidoscope
 kando
 katalon-studio
@@ -765,6 +793,7 @@ kdrive
 keepassxc
 keepassxc@snapshot
 keeper-password-manager
+keet
 keka
 keka@beta
 keyboard-cowboy
@@ -784,6 +813,7 @@ knime
 kodelife
 kopiaui
 kotlin-native
+kreya
 krisp
 kunkun
 label-live
@@ -832,6 +862,7 @@ logitech-g-hub
 logitune
 logos
 logseq
+longplay
 lookaway
 loom
 losslesscut
@@ -854,6 +885,7 @@ maccy
 macdroid
 macfuse
 macfuse@dev
+macgamestore
 macloggerdx
 macloggerdx@beta
 macpilot
@@ -878,8 +910,10 @@ marginnote
 marked
 markedit
 marsedit
+marvin
 mathpix-snipping-tool
 mattermost
+maxon
 mcbopomofo
 mcreator
 mdrp
@@ -900,6 +934,7 @@ mendeley-reference-manager
 menubarx
 meridiem
 merlin-project
+meru
 messenger
 meta-quest-developer-hub
 metashape
@@ -981,6 +1016,7 @@ motion
 motu-m-series
 mountain-duck
 mouseless
+mouseless@preview
 mp3tag
 mplab-xc32
 mqttx
@@ -1003,6 +1039,7 @@ mutedeck
 mweb-pro
 nagstamon
 name-mangler
+nao
 naps2
 native-access
 naver-whale
@@ -1015,6 +1052,7 @@ navicat-for-sqlite
 navicat-premium
 navicat-premium-lite
 navigraph-charts
+neo-network-utility
 neofinder
 neohtop
 neovide
@@ -1067,6 +1105,7 @@ olympus
 omnifocus
 omnigraffle
 omnioutliner
+omniplan
 onecast
 onedrive
 onekey
@@ -1115,6 +1154,7 @@ outline
 outline-manager
 output-factory
 overlayed
+ovice
 ovito
 ovito-pro
 oxygen-xml-developer
@@ -1146,7 +1186,6 @@ phoenix-slides
 phpstorm
 piclist
 pieces
-pieces-cli
 pieces-os
 pika
 pile
@@ -1167,8 +1206,10 @@ plover
 plus42-binary
 plus42-decimal
 pocket-casts
+podman-desktop
 podpisuj
 poe
+poedit
 pokemon-tcg-live
 poker-copilot
 polymail
@@ -1206,6 +1247,7 @@ progressive-downloader
 pronotes
 propresenter
 propresenter@beta
+protokol
 proton-drive
 proton-mail
 proton-mail-bridge
@@ -1234,6 +1276,7 @@ qlab
 qlc+
 qlmarkdown
 qlvideo
+qobuz
 qownnotes
 qq
 qqlive
@@ -1269,6 +1312,7 @@ readest
 readmoreading
 readyapi
 realforce
+realvnc-connect
 reaper
 receipts
 rectangle
@@ -1296,6 +1340,7 @@ restic-browser
 retcon
 retrobatch
 reveal
+reverso
 rhino
 ricochet-refresh
 rider
@@ -1324,6 +1369,8 @@ royal-tsx@beta
 rstudio
 rstudio@daily
 rubymine
+runelite
+runjs
 rustdesk
 rustrover
 sabnzbd
@@ -1343,6 +1390,7 @@ screenmemory
 screens-assist
 screens-connect
 scrivener
+scroll
 scrolla
 sdm
 seadrive
@@ -1379,6 +1427,7 @@ shift
 shortwave
 shutter-encoder
 sidenotes
+sigil
 sigmaos
 signal
 signal@beta
@@ -1395,8 +1444,6 @@ sketch
 sketch@beta
 sketchup
 skim
-skype
-skype@preview
 slab
 slack
 slack-cli
@@ -1414,6 +1461,7 @@ snagit
 snapmaker-luban
 snowflake-snowsql
 softmaker-freeoffice
+sokim
 sol
 solar2d
 sonarr
@@ -1439,7 +1487,7 @@ spike
 splashtop-business
 splashtop-streamer
 splice
-springtoolsuite
+springtoolsforeclipse
 spybuster
 spyder
 sqlcl
@@ -1449,6 +1497,7 @@ squash
 stability-matrix
 standard-notes
 starsector
+start
 startupfolder
 staruml
 stash
@@ -1458,6 +1507,7 @@ steamcmd
 steelseries-gg
 steermouse
 steinberg-activation-manager
+steinberg-download-assistant
 steinberg-mediabay
 stratoshark
 stratoshark@dev
@@ -1481,6 +1531,7 @@ supremo
 surfshark
 surge
 sweet-home3d
+swift-shift
 swiftformat-for-xcode
 swish
 sync
@@ -1497,9 +1548,9 @@ tableau-reader
 tableflip
 tableplus
 tabtab
-tageditor
 tagspaces
 tailscale
+tandem
 taskade
 taskbar
 tastytrade
@@ -1575,6 +1626,7 @@ touch-portal
 touchdesigner
 touchosc
 tower
+tqsl
 trader-workstation
 tradingview
 trae
@@ -1612,6 +1664,7 @@ ueli
 uhk-agent
 ui
 ui-tars
+ukelele
 ultimaker-cura
 ultimate
 ultrastardeluxe
@@ -1630,9 +1683,11 @@ utm@beta
 utools
 uu-booster
 uvtools
+vagrant
 valentina-studio
 vallum
 vamiga
+vapor
 vassal
 vbrokers
 vcam
@@ -1653,6 +1708,7 @@ virtualc64
 virtualdj
 virtualhere
 virtualhereserver
+viscosity
 visual-paradigm
 visual-paradigm-ce
 visual-studio-code
@@ -1666,6 +1722,7 @@ vlc@nightly
 vnc-viewer
 vnote
 voiceink
+void
 volanta
 vpn-tracker-365
 vrew
@@ -1691,6 +1748,7 @@ webex
 webstorm
 webull
 wechat
+wechatwebdevtools
 wechatwork
 wetype
 whalebird
@@ -1699,6 +1757,7 @@ whatsapp
 whatsapp@beta
 whatsize
 whimsical
+whoozle-android-file-transfer
 widelands
 wifi-explorer-pro
 wifispoof
@@ -1721,6 +1780,7 @@ wiso-steuer-2022
 wiso-steuer-2023
 wiso-steuer-2024
 wiso-steuer-2025
+witsy
 wizcli
 wljs-notebook
 wondershare-uniconverter
@@ -1765,8 +1825,8 @@ zap
 zappy
 zed
 zed@preview
-zen-browser
-zen-browser@twilight
+zen
+zen@twilight
 zeplin
 zettlr
 zight

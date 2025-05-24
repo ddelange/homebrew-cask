@@ -16,12 +16,16 @@ cask "sketch" do
     end
   end
   on_ventura :or_newer do
-    version "101.8,182106"
-    sha256 "619913f16a7ec019748b1c5c4ed1a39cbb7bc26c9b68038f02ca330e5ab31725"
+    version "101.9,182113"
+    sha256 "e6de9d00399f4511711f895c74b909496f690d4f0f4ba66340b158106262e873"
 
+    # Older versions may have a more recent `pubDate` than newer versions, so
+    # we have to check all of the items in the appcast.
     livecheck do
       url "https://download.sketch.com/sketch-versions.xml"
-      strategy :sparkle
+      strategy :sparkle do |items|
+        items.map(&:nice_version)
+      end
     end
   end
 

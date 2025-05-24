@@ -1,16 +1,16 @@
 cask "wins" do
-  version "2.6.1"
-  sha256 "dc19854ff982c1238615a6aa5776cf0770ae75aa68ea950a4ff2bb365ef8b15a"
+  version "2.6.2,43"
+  sha256 :no_check
 
-  url "https://f005.backblazeb2.com/file/winsWebsite/Wins_#{version}.zip",
-      verified: "f005.backblazeb2.com/file/winsWebsite/"
+  url "https://winswebsite.s3.us-east-005.backblazeb2.com/Wins.zip",
+      verified: "winswebsite.s3.us-east-005.backblazeb2.com/"
   name "Wins"
   desc "Window manager"
   homepage "https://wins.cool/"
 
   livecheck do
     url "https://wins.cool/update/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle
   end
 
   auto_updates true
@@ -19,11 +19,17 @@ cask "wins" do
   app "Wins.app"
 
   zap trash: [
+    "~/Library/Application Scripts/cool.wins.WinsHelper",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cool.wins.*.sfl*",
     "~/Library/Application Support/cools.wins.main",
     "~/Library/Application Support/Wins",
     "~/Library/Caches/cools.wins.main",
+    "~/Library/Containers/cool.wins.WinsHelper",
     "~/Library/Containers/WinsHelper",
-    "~/Library/HTTPStorages/cools.wins.main",
+    "~/Library/HTTPStorages/cools.wins.main*",
+    "~/Library/PreferencePanes/Wins.prefPane",
     "~/Library/Preferences/com.tinynudge.pomello.plist",
+    "~/Library/Preferences/cools.wins.main.plist",
+    "~/Library/WebKit/cools.wins.main",
   ]
 end

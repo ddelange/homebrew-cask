@@ -1,9 +1,9 @@
 cask "pycharm-ce" do
   arch arm: "-aarch64"
 
-  version "2025.1,251.23774.444"
-  sha256 arm:   "16f53e8200e3c17f1ea99cae469b94110cbc159e2063be0c0ce5e8b2f0214190",
-         intel: "75e447b1a0e047fe1666bcd840b05ea7a03a0abcab0c1a7775c304d2cdb70c60"
+  version "2025.1.1.1,251.25410.159"
+  sha256 arm:   "42f01916e2c773af0c144c74b1bba0d421b34f640c27cb4c5eb7be01a6d7a3d0",
+         intel: "4f9b2b6f853ebe95bbc38e7bdec5fe3ecd9ce799701d48e9464414c4616c0355"
 
   url "https://download.jetbrains.com/python/pycharm-community-#{version.csv.first}#{arch}.dmg"
   name "Jetbrains PyCharm Community Edition"
@@ -28,7 +28,16 @@ cask "pycharm-ce" do
   depends_on macos: ">= :high_sierra"
 
   app "PyCharm CE.app"
-  binary "#{appdir}/PyCharm CE.app/Contents/MacOS/pycharm", target: "pycharm-ce"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/pycharm.wrapper.sh"
+  binary shimscript, target: "pycharm-ce"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/PyCharm CE.app/Contents/MacOS/pycharm' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/JetBrains/PyCharmCE#{version.major_minor}",

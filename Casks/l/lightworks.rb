@@ -1,6 +1,6 @@
 cask "lightworks" do
-  version "2025.1,149933"
-  sha256 "06ca7ebada7236bb8dfec4040a6517a65d0b9a5f6740b41e1a0ca118e9d62d82"
+  version "2025.1,151564"
+  sha256 "609bdacc925ec8d51c99dfa82244ea05869e48bfa9a78dd112e282c967ec48df"
 
   url "https://cdn.lwks.com/releases/#{version.csv.first}/lightworks_#{version.csv.first.major_minor}_r#{version.csv.second}.dmg"
   name "Lightworks"

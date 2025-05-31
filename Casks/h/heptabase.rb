@@ -1,9 +1,9 @@
 cask "heptabase" do
   arch arm: "-arm64"
 
-  version "1.55.7"
-  sha256 arm:   "de765433f585405168ed73f8185909718fa248e395a87718d78c018f597e8d30",
-         intel: "9e83fb7e193190fb72e7d5df1d3331a9ece7438061ee7de1d5f2d1964c7b94c8"
+  version "1.57.0"
+  sha256 arm:   "456673315a9d3055263fb44cee4fa760a092cf70d027b22b341ebff705dcefff",
+         intel: "6d8e930c3317cabc556b95896ebe67d6755270c69cf0073bfcb4fa922f0a0113"
 
   url "https://github.com/heptameta/project-meta/releases/download/v#{version}/Heptabase-#{version}#{arch}-mac.zip",
       verified: "github.com/heptameta/project-meta/"

@@ -1,9 +1,9 @@
 cask "docker" do
   arch arm: "arm64", intel: "amd64"
 
-  version "4.41.0,190950"
-  sha256 arm:   "a209b418fcd2f5d6759fcb2b03693486f0ffb450328aa1f05e7d7123bf11fb64",
-         intel: "e4676dff5e440ca8c55370b98cad809e694455dee73987d7e358c9865f2e70dd"
+  version "4.41.2,191736"
+  sha256 arm:   "19c69b358a8ee1b94e308648a2853e398f4bff29f0f74f00ef2d1b462ced1d1c",
+         intel: "51a14a53808659f02b48f571dcf0e3cdb03a7e69cc51cc9ecb519bf6b10403df"
 
   on_intel do
     binary "Docker.app/Contents/Resources/bin/com.docker.hyperkit",
@@ -68,14 +68,14 @@ cask "docker" do
     # Only link if `kubernetes-cli` is not installed.
     next if kubectl_target.exist?
 
-    system_command "/bin/ln", args: ["-sfn", staged_path/"Docker.app/Contents/Resources/bin/kubectl", kubectl_target],
+    system_command "/bin/ln", args: ["-sfn", appdir/"Docker.app/Contents/Resources/bin/kubectl", kubectl_target],
                               sudo: !kubectl_target.dirname.writable?
   end
 
   uninstall_postflight do
     kubectl_target = Pathname("/usr/local/bin/kubectl")
 
-    if kubectl_target.symlink? && kubectl_target.readlink == staged_path/"Docker.app/Contents/Resources/bin/kubectl"
+    if kubectl_target.symlink? && kubectl_target.readlink == appdir/"Docker.app/Contents/Resources/bin/kubectl"
       system_command "/bin/rm", args: [kubectl_target],
                                 sudo: !kubectl_target.dirname.writable?
     end

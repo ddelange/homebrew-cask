@@ -1,6 +1,6 @@
 cask "macfuse@dev" do
-  version "4.10.2"
-  sha256 "fcca8ec48742288dccdd36db65bb92c4fe4bc23c2c7c5b76aa0ac68e06aebe88"
+  version "5.0.2"
+  sha256 "5d0b1367b654f49e24cec4178a247adf93f0cd37aa931771cbfec35bd2bc27b0"
 
   url "https://github.com/macfuse/macfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg",
       verified: "github.com/macfuse/macfuse/"
@@ -25,10 +25,14 @@ cask "macfuse@dev" do
     set_ownership ["/usr/local/include", "/usr/local/lib"]
   end
 
-  uninstall pkgutil: [
-    "io.macfuse.installer.components.core",
-    "io.macfuse.installer.components.preferencepane",
-  ]
+  uninstall launchctl: [
+              "io.macfuse.app.launchservice.broker",
+              "io.macfuse.app.launchservice.daemon",
+            ],
+            pkgutil:   [
+              "io.macfuse.installer.components.core",
+              "io.macfuse.installer.components.preferencepane",
+            ]
 
   zap trash: "/Library/PreferencePanes/macFUSE.prefPane"
 

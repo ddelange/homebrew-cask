@@ -1,6 +1,6 @@
 cask "zenmap" do
-  version "7.95"
-  sha256 "fc069b88f6b64cbb56b02a644075d78df603d9417d3947ff32acc0566439de3c"
+  version "7.97"
+  sha256 "144e26db1fca56c9a8fc6d4a6231ab6ca789f532d29dd4d31de04a83fba0c033"
 
   url "https://nmap.org/dist/nmap-#{version}.dmg"
   name "Zenmap"

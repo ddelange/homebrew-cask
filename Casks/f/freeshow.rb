@@ -1,9 +1,9 @@
 cask "freeshow" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.4.0"
-  sha256 arm:   "e176d82ce507ef36cfe6b89353e74e80112ac1de543706d64d130af7157686f8",
-         intel: "ebc7ce821a4411ed34c0c8dec62dea3aa815cc8350a41572e08545f479488870"
+  version "1.4.4"
+  sha256 arm:   "d11b617b71b4484d5ec7618b3d31943ee5e07873f0719044c58019fd626698b7",
+         intel: "56911186b5616d489b46272206df47c8ab185c770b3ca23eb54efd93ecac28e6"
 
   url "https://github.com/ChurchApps/FreeShow/releases/download/v#{version}/FreeShow-#{version}-#{arch}.zip",
       verified: "github.com/ChurchApps/"

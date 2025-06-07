@@ -12,11 +12,9 @@ cask "loopback" do
       url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1441&bundleid=com.rogueamoeba.Loopback&platform=osx&version=#{version.no_dots}8000"
       strategy :sparkle
     end
-
-    depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
-    version "2.4.5"
+    version "2.4.6"
 
     url "https://cdn.rogueamoeba.com/loopback/download/Loopback.zip"
 
@@ -24,8 +22,6 @@ cask "loopback" do
       url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=999&bundleid=com.rogueamoeba.Loopback&platform=osx&version=#{version.no_dots}8000"
       strategy :sparkle
     end
-
-    depends_on macos: ">= :sonoma"
 
     # NOTE: See https://www.rogueamoeba.com/support/knowledgebase/?showCategory=Loopback
     caveats "Loopback #{version} requires macOS 14.5 or newer."
@@ -36,6 +32,7 @@ cask "loopback" do
   homepage "https://rogueamoeba.com/loopback/"
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Loopback.app"
 

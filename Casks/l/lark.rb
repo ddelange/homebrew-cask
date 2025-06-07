@@ -3,12 +3,12 @@ cask "lark" do
   livecheck_arch = on_arch_conditional arm: "_m1"
 
   on_arm do
-    version "7.41.6,7d591ba8"
-    sha256 "47e097eb1f049ab071354b631391edfefd1dbde18e7df26761f53474a405fba6"
+    version "7.44.13,0101f700"
+    sha256 "7213c8314f54e204544b0edd16f69a457f8254bd769e3b12b82d13d9095dee8e"
   end
   on_intel do
-    version "7.41.6,ef64e17a"
-    sha256 "a2035686a4610a008ca6a17279547beebf0c5e0fa0cb4e4e6dca7134eb949cfa"
+    version "7.44.13,781aec32"
+    sha256 "c71eae5f3b8f54a2cae93adce64ee9c76a7debcee94c81699b4679ec0ee4796c"
   end
 
   url "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/#{version.csv.second}/Lark-darwin_#{arch}-#{version.csv.first}-signed.dmg",

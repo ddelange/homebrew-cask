@@ -1,6 +1,6 @@
 cask "font-mynaui-icons" do
-  version "0.3.1"
-  sha256 "d041b409035092bbbf69e86c1f61b4bc3049d11856365ce747edd67838675415"
+  version "0.3.7"
+  sha256 "46e21c2d194e3416f667b0777e416472f0f8a4729fdbc901bd0b5cb00df573d4"
 
   url "https://github.com/praveenjuge/mynaui-icons/archive/refs/tags/v#{version}.tar.gz",
       verified: "github.com/praveenjuge/mynaui-icons/"

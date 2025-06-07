@@ -1,9 +1,9 @@
 cask "termora" do
   arch arm: "aarch64", intel: "x86-64"
 
-  version "1.0.13"
-  sha256 arm:   "4954a9930692a6e873f62e673ebac4260bf2adc586defc5389bda7e79a877198",
-         intel: "815026334f817e0f040c8dc423a4b337596b5fbcc58c6ef10b8f99c1db15f216"
+  version "1.0.15"
+  sha256 arm:   "192c6128a47fbc5bd5031d99b4277abf52121b7148c3dd312571414bd3a95d91",
+         intel: "f9ba787d2c49d29f46baf6bb1795aa1ad64214e458d22471a6ec1c2335ccb187"
 
   url "https://github.com/TermoraDev/termora/releases/download/#{version}/termora-#{version}-osx-#{arch}.dmg"
   name "Termora"

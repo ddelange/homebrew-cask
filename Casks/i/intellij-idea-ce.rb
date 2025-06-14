@@ -1,9 +1,9 @@
 cask "intellij-idea-ce" do
   arch arm: "-aarch64"
 
-  version "2025.1,251.23774.435"
-  sha256 arm:   "051f322384f41dae627f0a2487f47a72e2c696ef38b5c256f4348aad0d47dffb",
-         intel: "9b1fecf56c9d2263f87bced7bb9164669c4e811e958c827480a7144b491e4a52"
+  version "2025.1.2,251.26094.121"
+  sha256 arm:   "61a64b8abf0b350cb14f963975fc87ec574bc4b50ae7944980c43c816ffad5a8",
+         intel: "c64c7ff7fe2e73d7552f1727d912bb5f901d040c7269b4292f94190475580c2b"
 
   url "https://download.jetbrains.com/idea/ideaIC-#{version.csv.first}#{arch}.dmg"
   name "IntelliJ IDEA Community Edition"
@@ -28,7 +28,16 @@ cask "intellij-idea-ce" do
   depends_on macos: ">= :high_sierra"
 
   app "IntelliJ IDEA CE.app"
-  binary "#{appdir}/IntelliJ IDEA CE.app/Contents/MacOS/idea", target: "idea-ce"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/idea.wrapper.sh"
+  binary shimscript, target: "idea-ce"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/IntelliJ IDEA CE.app/Contents/MacOS/idea' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/JetBrains/IdeaIC#{version.major_minor}",

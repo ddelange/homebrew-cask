@@ -1,11 +1,8 @@
 cask "serial-studio" do
-  arch arm: "arm64", intel: "x86_64"
+  version "3.1.2"
+  sha256 "65603c7662f91d1a0719f6600b2ff8dd9c53b5338928c4c18de2b41e7619300c"
 
-  version "3.0.6"
-  sha256 arm:   "86c36cd424ac22e0c01b6f02f4f94f99d27d96f9f5ced3da2ef6e303a64ef282",
-         intel: "00cf58d347c5bc71f89895df0a191543e65e32a79ce6847e466e67061399c576"
-
-  url "https://github.com/Serial-Studio/Serial-Studio/releases/download/v#{version}/Serial-Studio-#{version}-macOS-#{arch}.dmg",
+  url "https://github.com/Serial-Studio/Serial-Studio/releases/download/v#{version}/Serial-Studio-#{version}-macOS-Universal.dmg",
       verified: "github.com/Serial-Studio/Serial-Studio/"
   name "Serial Studio"
   desc "Data visualisation software for embedded devices and projects"
@@ -15,6 +12,8 @@ cask "serial-studio" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "Serial Studio.app"
 

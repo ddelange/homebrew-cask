@@ -1,6 +1,6 @@
 cask "bria" do
-  version "6.8.1,126728"
-  sha256 "836e8e7b657bbca0fbf32d7fcc5e82f0f37be6bfe3f759082b7745ecae6a9b2c"
+  version "6.8.2,127248"
+  sha256 "6ea83545d2413df430715a54eb0d8a73d98283633122083840d3104cfb02eec8"
 
   url "https://counterpath.s3.amazonaws.com/downloads/Bria_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "counterpath.s3.amazonaws.com/"
@@ -18,6 +18,8 @@ cask "bria" do
       "#{match[1]},#{match[2]}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :big_sur"

@@ -1,25 +1,8 @@
 cask "safari-technology-preview" do
   # when adjusting the on_{os} scoping, also update the livecheck regex
-  on_sonoma :or_older do
-    version "217,082-24898-20250416-5e8886bb-673b-43bc-9ce2-87d0736dc075"
-    sha256 "d31bf2aac4d9edcac334f0e5fa733dadab30ab40c98ba25f74db794da50a0163"
-
-    livecheck do
-      url :homepage
-      regex(%r{
-        href=.*?/([^/]+)/Safari(?:%20|\+)?Technology(?:%20|\+)?Preview\.dmg
-        .*?macOS(?:\s|&nbsp;)*14[\s.<]
-      }ix)
-      strategy :page_match do |page, regex|
-        release = page[%r{>\s*Release\s*</p>\s*<p[^>]*>\s*(\d+)[^<]*<}i, 1]
-        id = page[regex, 1]
-        "#{release},#{id}"
-      end
-    end
-  end
-  on_sequoia :or_newer do
-    version "217,082-24895-20250416-c0b70d7d-57a4-4cc4-a069-ed03f5dcb280"
-    sha256 "cea9d02a8d70de68ad54dbcf695fbeb40c91d25b19b57b38c7c8a94c3b06274f"
+  on_sequoia :or_older do
+    version "221,082-55173-20250611-f7ac187a-3730-4fc1-b55d-a7bad97afecb"
+    sha256 "3c0ab9a873bf4812df1236e2160763ddf5abcbe622bb9fdbd4b561653581780e"
 
     livecheck do
       url :homepage
@@ -34,14 +17,33 @@ cask "safari-technology-preview" do
       end
     end
   end
+  on_tahoe :or_newer do
+    version "221,082-56687-20250611-a060da5e-e093-4f59-b823-cb80c269000c"
+    sha256 "56ded30774906440523644873f89f89bfc7bae270bbdf9065832cdd97bdde67d"
+
+    livecheck do
+      url :homepage
+      regex(%r{
+        href=.*?/([^/]+)/Safari(?:%20|\+)?Technology(?:%20|\+)?Preview\.dmg
+        .*?macOS(?:\s|&nbsp;)*26[\s.<]
+      }ix)
+      strategy :page_match do |page, regex|
+        release = page[%r{>\s*Release\s*</p>\s*<p[^>]*>\s*(\d+)[^<]*<}i, 1]
+        id = page[regex, 1]
+        "#{release},#{id}"
+      end
+    end
+  end
 
   url "https://secure-appldnld.apple.com/STP/#{version.csv.second}/SafariTechnologyPreview.dmg"
   name "Safari Technology Preview"
   desc "Web browser"
   homepage "https://developer.apple.com/safari/resources/"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :sequoia"
 
   pkg "Safari Technology Preview.pkg"
 

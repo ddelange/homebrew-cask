@@ -10,9 +10,15 @@ cask "cernbox" do
   desc "Cloud storage for CERN users"
   homepage "https://cernbox.web.cern.ch/cernbox/"
 
+  # The download page contains links for both stable and unstable versions.
+  # This only uses the first match on the page, which should be the stable
+  # version.
   livecheck do
-    url "https://cernbox.cern.ch/cernbox/doc/MacOSX/"
+    url "https://cernbox.web.cern.ch/cernbox/downloads/"
     regex(/href=.*?cernbox[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.pkg/i)
+    strategy :page_match do |page, regex|
+      page[regex, 1]
+    end
   end
 
   pkg "cernbox-#{version}-#{arch}.pkg"

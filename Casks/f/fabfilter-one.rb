@@ -1,6 +1,6 @@
 cask "fabfilter-one" do
-  version "3.40"
-  sha256 "deccbb529c30cbda942dac088cbc6dadab620eb8792653a1b9e1d37d45a8a1f5"
+  version "3.50"
+  sha256 "83dd4ab5061957a0d0dae9c92a8dc0ca310c547b89c1f21fff0c3d837c6a69f7"
 
   url "https://cdn-b.fabfilter.com/downloads/ffone#{version.no_dots}.dmg"
   name "FabFilter One"
@@ -11,6 +11,8 @@ cask "fabfilter-one" do
     url "https://www.fabfilter.com/download"
     regex(/FabFilter\s+One.*?v?(\d+(?:\.\d+)+)/im)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :sierra"
 

@@ -3,12 +3,12 @@ cask "feishu" do
   livecheck_arch = on_arch_conditional arm: "_m1"
 
   on_arm do
-    version "7.42.5,b21d69b2"
-    sha256 "411bc188ef52c994bd501c4781dfd21a49696d5a24ceeb1b5e38a722749395a8"
+    version "7.44.6,91d0e7db"
+    sha256 "b7022a42dce445b0cddb3f56121ab4254a9aa5267a52b72fd616a556772baf00"
   end
   on_intel do
-    version "7.42.5,08c8e3b7"
-    sha256 "2a245a61cae3d838eaa9655ff1349142bc73fcdb31e0bd8eb40f7975c2234346"
+    version "7.44.6,a289393f"
+    sha256 "db79cd17cb43ae70b5a5510714ede0ea7b81589dea05cdb84f5b9a1050d188b9"
   end
 
   url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.csv.second}/Feishu-darwin_#{arch}-#{version.csv.first}-signed.dmg",

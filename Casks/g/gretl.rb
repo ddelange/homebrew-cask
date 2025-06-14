@@ -1,9 +1,9 @@
 cask "gretl" do
   arch arm: "arm64", intel: "intel"
 
-  version "2025a"
-  sha256 arm:   "6f3799e5b4dc8b99c0254aa9b661da35446fef6864a4b7c04b4eb83757681b2a",
-         intel: "47e6e8cd2804fd01f3c08f8c81307ea939b19c7146c79aacc8bba33c3dca0ed3"
+  version "2025b"
+  sha256 arm:   "1be3b2b497c25b5062b6f159eb5cb587c96ce92f0b2a482f278bb824fa26e444",
+         intel: "29e16e08ed1e887f0e2507e4cf3106c4f35b26d4472a6027259f4d20ed02498c"
 
   url "https://downloads.sourceforge.net/gretl/gretl-#{version}-macos-#{arch}.pkg"
   name "gretl"
@@ -14,6 +14,8 @@ cask "gretl" do
     url "https://sourceforge.net/projects/gretl/rss?path=/gretl"
     regex(%r{url=.*?/gretl[._-]v?(\d+(?:\.\d+)*[a-z]?)[._-]macos[._-]#{arch}\.pkg}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "gretl-#{version}-macos-#{arch}.pkg"
 

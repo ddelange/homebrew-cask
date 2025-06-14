@@ -18,10 +18,13 @@ cask "prismlauncher" do
   desc "Minecraft launcher"
   homepage "https://prismlauncher.org/"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Prism Launcher.app"
+  binary "#{appdir}/Prism Launcher.app/Contents/MacOS/prismlauncher"
 
   zap trash: [
     "~/Library/Application Support/PrismLauncher/metacache",

@@ -7,12 +7,16 @@ cask "dymo-connect" do
   desc "Software for DYMO LabelWriters"
   homepage "https://www.dymo.com/support?cfid=online-support"
 
-  # This can return a page with a CAPTCHA instead of the expected content
-  # (e.g. when the check is run in the homebrew/cask CI environment).
   livecheck do
-    url :homepage
-    regex(/href=.*?DCDMacv?(\d+(?:\.\d+)+)\.pkg/i)
+    url "https://download.dymo.com/Software/dymoconnect/updates/Mac/Updates.xml"
+    strategy :xml do |xml|
+      xml.elements["//DYMOConnect/Version"]&.text&.strip
+    end
   end
+
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
 
   pkg "DCDMac#{version}.pkg"
 

@@ -1,6 +1,6 @@
 cask "abstract" do
-  version "98.5.0"
-  sha256 "a6edc96350207e36e227bb8f6d8c0a32710d0e3feb8ba171c27b4106b0392b66"
+  version "98.6.1"
+  sha256 "227ed1f8ac93ec8f6a3dfcf5c7d076a728df105ab5ac5a0ed50fb5152134b4f1"
 
   url "https://downloads.goabstract.com/mac/Abstract-#{version}.zip",
       verified: "downloads.goabstract.com/"
@@ -16,7 +16,7 @@ cask "abstract" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Abstract.app"
 
@@ -28,8 +28,4 @@ cask "abstract" do
     "~/Library/Preferences/com.elasticprojects.abstract-desktop.plist",
     "~/Library/Saved Application State/com.elasticprojects.abstract-desktop.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

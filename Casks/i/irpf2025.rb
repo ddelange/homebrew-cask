@@ -1,6 +1,6 @@
 cask "irpf2025" do
-  version "1.2"
-  sha256 "9bc13c82d45f12e2e3852f357985db79db207c49d05872b6882eaf2759a3f14e"
+  version "1.4"
+  sha256 "70b5984f72bca738fe78d0626555886dcfc6ff399038bb0837398c4dc1ffe2b9"
 
   url "https://downloadirpf.receita.fazenda.gov.br/irpf/2025/irpf/arquivos/IRPF2025-v#{version}.dmg"
   name "IRPF 2025"
@@ -13,6 +13,8 @@ cask "irpf2025" do
       xml.elements["//pkgver"]&.text&.strip
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :sierra"
 

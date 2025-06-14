@@ -1,11 +1,11 @@
 cask "ui-tars" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.0"
-  sha256 arm:   "09ccd9eca19e8669f94e921e08118f79674dfe9f38c45df7f2f0180b8f996473",
-         intel: "84e354cfaa5da58d17e2b648c7528d7df94b6f3be2071d6a89380922f8fed616"
+  version "0.2.0"
+  sha256 arm:   "d5282e976ea63564183f8e1a72b1eed3ca230dfedd5d26769df30be75a92cc88",
+         intel: "a4b95b0702422dd99679ca365efc4d3c64314b04c169acf32f524736462e6c0f"
 
-  url "https://github.com/bytedance/UI-TARS-desktop/releases/download/v#{version}/UI.TARS-#{version}-#{arch}.dmg"
+  url "https://github.com/bytedance/UI-TARS-desktop/releases/download/v#{version}/UI-TARS-#{version}-#{arch}.dmg"
   name "UI-TARS Desktop"
   desc "GUI Agent for computer control using UI-TARS vision-language model"
   homepage "https://github.com/bytedance/UI-TARS-desktop"

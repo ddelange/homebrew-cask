@@ -1,5 +1,5 @@
 cask "karafun" do
-  version "2.10.1"
+  version "2.11.0"
   sha256 :no_check
 
   url "https://www.karafun.com/download/mac.html"
@@ -11,6 +11,8 @@ cask "karafun" do
     url "https://www.karafun.fr/osx/appcast.xml"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :sonoma"

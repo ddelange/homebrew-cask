@@ -1,65 +1,44 @@
 cask "simply-fortran" do
-  arch arm: "-arm64", intel: "-x86_64"
-
-  version "3.40.4414"
+  version "3.40.4424"
 
   on_big_sur :or_older do
-    sha256 "48805a40ea00d4ba2576b576cac532df8c2b34717a1852538c5df30572c2521f"
+    arch arm: "x86_64.legacy", intel: "x86_64.legacy"
 
-    url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}-x86_64.legacy.dmg"
-
-    livecheck do
-      url "https://simplyfortran.com/download/?platform=macos"
-      regex(/href=.*?simplyfortran[._-]v?(\d+(?:\.\d+)+)[._-]x86_64\.legacy\.dmg/i)
-    end
+    sha256 "b326cc151fa7d2b896f5aa5d08e8d1768638ced2f511d0f251d2cbeda6797607"
 
     caveats do
       requires_rosetta
     end
   end
-  on_monterey do
-    sha256 "660a6235f565800790e3e8d78c5b8d89a2924ec31b0003fb2ddd577356ee6c07"
+  on_monterey :or_newer do
+    on_ventura :or_older do
+      arch arm: "x86_64", intel: "x86_64"
 
-    url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}-x86_64.dmg"
+      sha256 "f711ba2e206b7ff4944319da2b5e98a1f48112ef26d474cb01cd59ffcacb5def"
 
-    livecheck do
-      url "https://simplyfortran.com/download/?platform=macos"
-      regex(/href=.*?simplyfortran[._-]v?(\d+(?:\.\d+)+)[._-]x86_64\.dmg/i)
-    end
-
-    caveats do
-      requires_rosetta
-    end
-  end
-  on_ventura do
-    sha256 "660a6235f565800790e3e8d78c5b8d89a2924ec31b0003fb2ddd577356ee6c07"
-
-    url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}-x86_64.dmg"
-
-    livecheck do
-      url "https://simplyfortran.com/download/?platform=macos"
-      regex(/href=.*?simplyfortran[._-]v?(\d+(?:\.\d+)+)[._-]x86_64\.dmg/i)
-    end
-
-    caveats do
-      requires_rosetta
+      caveats do
+        requires_rosetta
+      end
     end
   end
   on_sonoma :or_newer do
-    sha256 arm:   "3f138e8fbc65e3ca3535bcaaadfee4a707561e28e7d7dcb630af6ec959ed6427",
-           intel: "660a6235f565800790e3e8d78c5b8d89a2924ec31b0003fb2ddd577356ee6c07"
+    arch arm: "arm64", intel: "x86_64"
 
-    url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}#{arch}.dmg"
-
-    livecheck do
-      url "https://simplyfortran.com/download/?platform=macos"
-      regex(/href=.*?simplyfortran[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
-    end
+    sha256 arm:   "aa40ad159edb13a54478f611050d852d92eb8c912dae0e26c7fe51b0e0770e67",
+           intel: "f711ba2e206b7ff4944319da2b5e98a1f48112ef26d474cb01cd59ffcacb5def"
   end
 
+  url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}-#{arch}.dmg"
   name "Simply Fortran"
   desc "Fortran development environment"
   homepage "https://simplyfortran.com/"
+
+  livecheck do
+    url "https://simplyfortran.com/download/?platform=macos"
+    regex(/href=.*?simplyfortran[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
+  end
+
+  no_autobump! because: :requires_manual_review
 
   app "Simply Fortran.app"
 

@@ -1,6 +1,6 @@
 cask "zappy" do
-  version "4.8.5"
-  sha256 "3afbeba5ae8d3ee6c435bc4729c690e0f044c5f346a728eaacf16fefc20cfb6c"
+  version "4.8.7"
+  sha256 "316ce44183fab70474d286fac9919f2beb993f3b02813788475101a9804fdc79"
 
   url "https://zappy.zapier.com/releases/zappy-#{version}.dmg"
   name "Zappy"

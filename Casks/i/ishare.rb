@@ -1,6 +1,6 @@
 cask "ishare" do
-  version "4.2.1"
-  sha256 "b55714ae1863f771c0ae4f2f58e2ec16e7a660ba1cf077aea65c76e9b102edce"
+  version "4.2.4"
+  sha256 "a98f69cc9e3ef33ecbf46a9020c00ab64ba7ffd6ba56d97962f0c33ff7d59cb2"
 
   url "https://github.com/castdrian/ishare/releases/download/v#{version}/ishare.dmg"
   name "ishare"
@@ -11,6 +11,8 @@ cask "ishare" do
     url :url
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :sequoia"
 

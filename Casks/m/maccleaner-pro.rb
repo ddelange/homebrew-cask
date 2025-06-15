@@ -1,6 +1,6 @@
 cask "maccleaner-pro" do
   version "3.3.7,572"
-  sha256 "f262f595aa48706e77381283ee14f83a5d8753867603348e2497bbd6fbe822e8"
+  sha256 "39442ff5da54672a97c26ffd642154c411a4d54d5940d937d4ae0ec5183f9f9e"
 
   url "https://nektony.com/download/mac-cleaner-pro/dmg/mac-cleaner-pro.dmg?build=#{version.csv.second}"
   name "Nektony MacCleaner Pro"
@@ -11,6 +11,8 @@ cask "maccleaner-pro" do
     url "https://download.nektony.com/pro-support/v3/mac-cleaner-pro/update/update.xml"
     strategy :sparkle
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

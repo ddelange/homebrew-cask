@@ -1,5 +1,5 @@
 cask "network-radar" do
-  version "3.1"
+  version "3.1.1"
   sha256 :no_check
 
   url "https://witt-software.com/downloads/networkradar/Network%20Radar.dmg"
@@ -11,6 +11,8 @@ cask "network-radar" do
     url "https://www.witt-software.com/downloads/networkradar/appcast.xml"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :monterey"

@@ -1,14 +1,9 @@
 cask "ace-studio" do
   arch arm: "arm64", intel: "x86_64"
 
-  on_arm do
-    version "1.9.9,1058"
-    sha256 "374f40846755150849b5b7a75fce595889f02c8e85e27f3c11e2bea72f3b73e3"
-  end
-  on_intel do
-    version "1.9.9,1050"
-    sha256 "4698c3efd3b6420604bcc4e81f3be9ef9e2132778e5d45a07ae5df13c40396e5"
-  end
+  version "1.9.11,1220"
+  sha256 arm:   "6d352cc9c7bcb0dbcc02693916ae8fbb355b5df00bb68aff0d1ecdd56bafb7ee",
+         intel: "4cad589b7cdf1683e9d1ebed1fd5d18bf0eb34b1d7f8d2203dbcd5c1a24217f8"
 
   url "https://as-api-ws-cdn-1.tdacestudio.com/web/app/ACE_Studio_#{version.csv.first}_#{version.csv.second}_#{arch}_general.dmg",
       verified: "as-api-ws-cdn-1.tdacestudio.com/web/app/"
@@ -28,6 +23,8 @@ cask "ace-studio" do
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :mojave"
 

@@ -1,9 +1,9 @@
 cask "goland" do
   arch arm: "-aarch64"
 
-  version "2025.1,251.23774.430"
-  sha256 arm:   "6c478fc82467dc3f9970bc03b8c035210a0eb73cef9e32b27d6cd0dac9e166b6",
-         intel: "587e7a7e56672405b31252567d47eccbc39a5623ec2b8f4f8bf424b038396b86"
+  version "2025.1.2,251.26094.127"
+  sha256 arm:   "a30940d1b2659487ababc3a9ad8e4770236e90ad6c732cb1fd0c24690829a0ce",
+         intel: "6d3c732fb3aadc7dad9bb6dafd294be04c82a4dd994223e4982b77213bf9a4b6"
 
   url "https://download.jetbrains.com/go/goland-#{version.csv.first}#{arch}.dmg"
   name "Goland"
@@ -27,7 +27,16 @@ cask "goland" do
   depends_on macos: ">= :high_sierra"
 
   app "GoLand.app"
-  binary "#{appdir}/GoLand.app/Contents/MacOS/goland"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/goland.wrapper.sh"
+  binary shimscript, target: "goland"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/GoLand.app/Contents/MacOS/goland' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/JetBrains/GoLand",

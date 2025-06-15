@@ -7,7 +7,7 @@ AllCops:
   Include:
   - "**/*.rbi"
   Exclude:
-  - Homebrew/sorbet/rbi/{dsl,gems}/**/*.rbi
+  - Homebrew/sorbet/rbi/{annotations,dsl,gems}/**/*.rbi
   - Homebrew/sorbet/rbi/parser*.rbi
   - Homebrew/bin/*
   - Homebrew/vendor/**/*
@@ -178,10 +178,8 @@ Style/MutableConstant:
 Style/NumericLiteralPrefix:
   EnforcedOctalStyle: zero_only
 Style/NumericLiterals:
-  MinDigits: 7
+  MinDigits: 11
   Strict: true
-  Exclude:
-  - "**/Brewfile"
 Style/OpenStructUse:
   Exclude:
   - Taps/**/*

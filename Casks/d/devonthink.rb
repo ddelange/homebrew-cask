@@ -8,8 +8,8 @@ cask "devonthink" do
     end
   end
   on_big_sur :or_newer do
-    version "3.9.9"
-    sha256 "718bb6dd403e93a77b5902f243da5f0103fbc5d7962949df3a8b6ba28cdf368e"
+    version "3.9.11"
+    sha256 "502bab23b869709edfa6a975d87b4094d9e43a9571945a76b31d20a6fa906b93"
 
     # The appcast may include unstable versions where upstream doesn't specify a
     # separate channel, so we have to identify stable versions using a regex.
@@ -26,6 +26,8 @@ cask "devonthink" do
   name "DEVONthink"
   desc "Collect, organise, edit and annotate documents"
   homepage "https://www.devontechnologies.com/apps/devonthink"
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :mojave"

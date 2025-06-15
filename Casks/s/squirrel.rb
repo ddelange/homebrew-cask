@@ -9,9 +9,11 @@ cask "squirrel" do
   homepage "https://rime.im/"
 
   livecheck do
-    url "https://rime.github.io/release/squirrel/appcast.xml"
+    url "https://rime.im/release/squirrel/appcast.xml"
     strategy :sparkle
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :ventura"

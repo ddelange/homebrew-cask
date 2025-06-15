@@ -1,11 +1,13 @@
 cask "rewind" do
   version "1.5310,15310.1"
-  sha256  :no_check
+  sha256 :no_check
 
   url "https://download.rewind.ai/Rewind.dmg"
   name "Rewind"
   desc "Record and search your screen and audio"
   homepage "https://www.rewind.ai/"
+
+  no_autobump! because: :requires_manual_review
 
   deprecate! date: "2024-12-31", because: :unmaintained
 

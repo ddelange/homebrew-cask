@@ -11,6 +11,8 @@ cask "font-inconsolata-go-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "InconsolataGoNerdFont-Bold.ttf"
   font "InconsolataGoNerdFont-Regular.ttf"
   font "InconsolataGoNerdFontMono-Bold.ttf"

@@ -1,12 +1,11 @@
 cask "abstract" do
-  version "98.5.0"
-  sha256 "a6edc96350207e36e227bb8f6d8c0a32710d0e3feb8ba171c27b4106b0392b66"
+  version "98.6.2"
+  sha256 "744dd1dfcafaf43d7c1216e10f38bb6888d91ddfec207852652158bc78636bc3"
 
-  url "https://downloads.goabstract.com/mac/Abstract-#{version}.zip",
-      verified: "downloads.goabstract.com/"
+  url "https://downloads.goabstract.com/mac/Abstract-#{version}.zip"
   name "Abstract"
   desc "Collaborative design tool with support for Sketch files"
-  homepage "https://www.abstract.com/"
+  homepage "https://www.goabstract.com/"
 
   livecheck do
     url "https://api.goabstract.com/releases/latest"
@@ -16,7 +15,7 @@ cask "abstract" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Abstract.app"
 
@@ -28,8 +27,4 @@ cask "abstract" do
     "~/Library/Preferences/com.elasticprojects.abstract-desktop.plist",
     "~/Library/Saved Application State/com.elasticprojects.abstract-desktop.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

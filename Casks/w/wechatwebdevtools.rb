@@ -1,9 +1,9 @@
 cask "wechatwebdevtools" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.06.2503290"
-  sha256 arm:   "370c0ced6fe19caa1b56fe64b8aea4d65157f20d62fd553ffc9cff565c296076",
-         intel: "243369f15e7b6f453fbf31480aed2c0e320fdbb5ccff592f76b41bfbdada3bbc"
+  version "1.06.2503310"
+  sha256 arm:   "c251487d6bd45ff9432a830625b809a68660032e9cd3c8583cca154e9cf0d83d",
+         intel: "bcdcd0ee8aa18778145b777bc9e733794f85b0aac888c2948195fd99c9b677d5"
 
   url "https://dldir1.qq.com/WechatWebDev/release/be1ec64cf6184b0fa64091919793f068/wechat_devtools_#{version}_darwin_#{arch}.dmg"
   name "Wechat DevTools"

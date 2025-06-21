@@ -11,6 +11,8 @@ cask "font-departure-mono-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "DepartureMonoNerdFont-Regular.otf"
   font "DepartureMonoNerdFontMono-Regular.otf"
   font "DepartureMonoNerdFontPropo-Regular.otf"

@@ -11,6 +11,8 @@ cask "font-shure-tech-mono-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "ShureTechMonoNerdFont-Regular.ttf"
   font "ShureTechMonoNerdFontMono-Regular.ttf"
   font "ShureTechMonoNerdFontPropo-Regular.ttf"

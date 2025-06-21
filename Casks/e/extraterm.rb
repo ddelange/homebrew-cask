@@ -1,6 +1,6 @@
 cask "extraterm" do
-  version "0.81.0"
-  sha256 "f6d8d5dccfebe35e9f4a8d0f58f44a9654dcb717b282828b7112c043b66daab0"
+  version "0.81.2"
+  sha256 "1b8fccb25a46083f16bafc3032a9c4faf317137720ebdca8edb72211d9be682d"
 
   url "https://github.com/sedwards2009/extraterm/releases/download/v#{version}/ExtratermQt_#{version}.dmg",
       verified: "github.com/sedwards2009/extraterm/"

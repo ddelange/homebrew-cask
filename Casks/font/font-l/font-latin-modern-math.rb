@@ -11,6 +11,8 @@ cask "font-latin-modern-math" do
     regex(/version\s+v?(\d+(?:\.\d+)+)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "latinmodern-math-#{version.no_dots}/otf/latinmodern-math.otf"
 
   # No zap stanza required

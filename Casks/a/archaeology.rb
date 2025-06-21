@@ -1,5 +1,5 @@
 cask "archaeology" do
-  version "1.2,155"
+  version "1.3,181"
   sha256 :no_check
 
   url "https://www.mothersruin.com/software/downloads/Archaeology.dmg"
@@ -17,6 +17,8 @@ cask "archaeology" do
       "#{short_version.strip},#{version.strip}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :monterey"
 

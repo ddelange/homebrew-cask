@@ -18,11 +18,13 @@ cask "liclipse" do
 
   livecheck do
     url "https://www.liclipse.com/download.html"
-    regex(%r{href=.*?/([0-9a-z]+)/liclipse[._-]v?(\d+(?:\.\d+)+)_macosx\.cocoa\.#{arch.downcase}\.t}i)
+    regex(%r{href=.*?/([a-z0-9]+)/liclipse[._-]v?(\d+(?:\.\d+)+)_macosx\.cocoa\.#{arch.downcase}\.t}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "LiClipse_#{arch}/LiClipse.app"
   artifact "LiClipse_#{arch}/LiClipseJre19.app", target: "#{appdir}/LiClipseJre19.app"

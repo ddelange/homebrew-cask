@@ -1,9 +1,9 @@
 cask "burp-suite" do
   arch arm: "MacOsArm64", intel: "MacOsx"
 
-  version "2025.3.3"
-  sha256 arm:   "7a88492681208abce00305f13a7f8eeae4fa4db789d86d33c9eddb2d1c33ce79",
-         intel: "c0329433801212ee6da59a255c5f19639a75aa1600c472266aaeaa297d12cf97"
+  version "2025.5.4"
+  sha256 arm:   "70ed8e585e08a9e41a8cf3f43908c48cf8f84e47918846d4589dd1e49cee2678",
+         intel: "312a1aed05518e89d552b611fefb9f4e1d4368e2425b688ab51cc9f4b2ccca4c"
 
   url "https://portswigger-cdn.net/burp/releases/download?product=community&version=#{version}&type=#{arch}",
       verified: "portswigger-cdn.net/burp/releases/"
@@ -27,6 +27,9 @@ cask "burp-suite" do
       end
     end
   end
+
+  conflicts_with cask: "burp-suite@early-adopter"
+  depends_on macos: ">= :catalina"
 
   app "Burp Suite Community Edition.app"
 

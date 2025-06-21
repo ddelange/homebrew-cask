@@ -11,6 +11,8 @@ cask "font-hack-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "HackNerdFont-Bold.ttf"
   font "HackNerdFont-BoldItalic.ttf"
   font "HackNerdFont-Italic.ttf"

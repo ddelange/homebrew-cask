@@ -1,6 +1,6 @@
 cask "clay" do
-  version "2.18.7"
-  sha256 "732bc380a97f6e4ceb2c8215e34e8bec14074b7ce493a2f7c7119b51f6045155"
+  version "2.18.11"
+  sha256 "673e0206a87e87b6586f649719e313588b7ef58b46c1b6a5878dca6496e62879"
 
   url "https://assets.clay.earth/desktop/mac/Clay-#{version}-universal.dmg"
   name "Clay"

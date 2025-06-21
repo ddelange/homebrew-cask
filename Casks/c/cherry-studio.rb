@@ -1,23 +1,22 @@
 cask "cherry-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.2.10"
-  sha256 arm:   "3e4cc061dd00dbe3e6ae462b9f7ffc2adaaddb83accb92ee757cff8fb27b90b7",
-         intel: "b935b80ca352da92763e91054ac75bb063c6a90ab05ca1b63d1ebe8d48df6ae2"
+  version "1.4.3"
+  sha256 arm:   "5968d9435f4cf2054ba0eab561631122185352145a1671fce09227197cbee31b",
+         intel: "9d24203bf683dd6df7e53cdf5a2fe5d4625b7eec3906fbc9c7af3544c752b796"
 
-  url "https://github.com/CherryHQ/cherry-studio/releases/download/v#{version}/Cherry-Studio-#{version}-#{arch}.zip",
-      verified: "github.com/CherryHQ/cherry-studio/"
+  url "https://releases.cherry-ai.com/Cherry-Studio-#{version}-#{arch}.zip"
   name "Cherry Studio"
   desc "Desktop client that supports multiple LLM providers"
   homepage "https://cherry-ai.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://releases.cherry-ai.com/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Cherry Studio.app"
   binary "#{appdir}/Cherry Studio.app/Contents/MacOS/Cherry Studio", target: "cherry-studio"

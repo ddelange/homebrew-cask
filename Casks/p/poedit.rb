@@ -1,6 +1,6 @@
 cask "poedit" do
-  version "3.6.1"
-  sha256 "6c84e752812756cdacafe00350e93bd80feca8d6673731a9d897ea5c5a18392b"
+  version "3.6.3"
+  sha256 "284e34d12a7e3131a02fdbe6bfa35cd4a7fe6100988f956548b3be7794f0825c"
 
   url "https://download.poedit.net/Poedit-#{version}.zip"
   name "Poedit"

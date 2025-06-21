@@ -1,9 +1,9 @@
 cask "intellij-idea@eap" do
   arch arm: "-aarch64"
 
-  version "2025.1.1,251.25410.28"
-  sha256 arm:   "8fead2731e6caa9f039fecc5a2937232e5d83b9428541f28862fa36e8d2dd86e",
-         intel: "63d1d8fad2af69cefc7a7ca79740162826bbfcb7e1dc08e18f3dab4776a14180"
+  version "2025.2,252.23309.22"
+  sha256 arm:   "360b33ad4ce30c2c095b2bd6d47f2a3df8b297faabf91c9fe12b4f453a9a1206",
+         intel: "ef08e9772a76c30c4591253cacc7174ceb0f914476e35d429a9e67f75c19cb19"
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.csv.second}#{arch}.dmg"
   name "IntelliJ IDEA EAP"
@@ -27,8 +27,8 @@ cask "intellij-idea@eap" do
   conflicts_with cask: "intellij-idea"
   depends_on macos: ">= :high_sierra"
 
-  app "IntelliJ IDEA.app"
-  binary "#{appdir}/IntelliJ IDEA.app/Contents/MacOS/idea"
+  app "IntelliJ IDEA #{version.csv.first} EAP.app"
+  binary "#{appdir}/IntelliJ IDEA #{version.csv.first} EAP.app/Contents/MacOS/idea"
 
   uninstall_postflight do
     ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "idea") }.each do |path|

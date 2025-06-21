@@ -1,6 +1,6 @@
 cask "the-archive" do
-  version "1.8.1"
-  sha256 "24daaced40fdc756d75c900e729e3cc38aefad1ab4a44e8886e3de85a863e688"
+  version "1.9.1"
+  sha256 "ff9149e3c68b017829fb95ee9f4cac816184464c4afa7826be0eca0107ae9c45"
 
   url "https://dlyfuw95744jo.cloudfront.net/TheArchive-v#{version}.dmg",
       verified: "dlyfuw95744jo.cloudfront.net/"
@@ -12,6 +12,8 @@ cask "the-archive" do
     url "https://zettelkasten.de/the-archive/download"
     strategy :header_match
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

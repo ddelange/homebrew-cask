@@ -11,6 +11,8 @@ cask "font-caskaydia-cove-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "CaskaydiaCoveNerdFont-Bold.ttf"
   font "CaskaydiaCoveNerdFont-BoldItalic.ttf"
   font "CaskaydiaCoveNerdFont-ExtraLight.ttf"

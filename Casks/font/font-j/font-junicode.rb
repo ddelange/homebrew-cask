@@ -1,6 +1,6 @@
 cask "font-junicode" do
-  version "2.211"
-  sha256 "986b164c5b15e157728d5f86ee93c452f8d3ff345c5ab3b0d146cb842bbbce46"
+  version "2.214"
+  sha256 "83ac3f121b6757cb6cd1f6212534cbf7bd01a6da9ab4ba416dccb2314d506574"
 
   url "https://github.com/psb1558/Junicode-font/releases/download/v#{version}/Junicode_#{version}.zip"
   name "Junicode"
@@ -10,6 +10,8 @@ cask "font-junicode" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   font "Junicode/OTF/Junicode-Bold.otf"
   font "Junicode/OTF/Junicode-BoldItalic.otf"

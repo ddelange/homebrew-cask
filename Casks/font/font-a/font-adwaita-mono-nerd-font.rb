@@ -11,6 +11,8 @@ cask "font-adwaita-mono-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "AdwaitaMonoNerdFont-Bold.ttf"
   font "AdwaitaMonoNerdFont-BoldItalic.ttf"
   font "AdwaitaMonoNerdFont-Italic.ttf"

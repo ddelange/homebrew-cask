@@ -22,6 +22,8 @@ cask "font-oppo-sans" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "OPPO_Sans_#{version.csv.first}/OPPO Sans #{version.csv.first}.ttf"
 
   # No zap stanza required

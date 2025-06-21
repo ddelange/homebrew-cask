@@ -1,5 +1,5 @@
 cask "winx-hd-video-converter" do
-  version "6.8.3"
+  version "6.8.4"
   sha256 :no_check
 
   url "https://www.winxdvd.com/download/winx-hd-video-converter-for-mac.dmg"
@@ -12,7 +12,9 @@ cask "winx-hd-video-converter" do
     regex(/for\s*Mac\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  app "Winx HD Video Converter for Mac.app"
+  no_autobump! because: :requires_manual_review
+
+  app "WinX HD Video Converter for Mac.app"
 
   zap trash: [
     "~/Library/Caches/com.winxdvd.hdvideoconverterformac",

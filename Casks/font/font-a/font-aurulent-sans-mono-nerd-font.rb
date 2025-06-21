@@ -11,6 +11,8 @@ cask "font-aurulent-sans-mono-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "AurulentSansMNerdFont-Regular.otf"
   font "AurulentSansMNerdFontMono-Regular.otf"
   font "AurulentSansMNerdFontPropo-Regular.otf"

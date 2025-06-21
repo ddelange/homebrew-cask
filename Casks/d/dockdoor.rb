@@ -1,6 +1,6 @@
 cask "dockdoor" do
-  version "1.6.2"
-  sha256 "d1c0387d391b74a15d596b2243dedfa279b0b3d5406b98628cd0d0a1eff1b69d"
+  version "1.17"
+  sha256 "fa1d0a1c92c672e6f81643fda81a829e15a9e7a33b608ea4f87be47dc0989209"
 
   url "https://github.com/ejbills/DockDoor/releases/download/v#{version}/DockDoor.dmg",
       verified: "github.com/ejbills/DockDoor/"
@@ -10,7 +10,7 @@ cask "dockdoor" do
 
   livecheck do
     url "https://dockdoor.net/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

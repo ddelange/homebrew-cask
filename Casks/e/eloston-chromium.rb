@@ -1,9 +1,9 @@
 cask "eloston-chromium" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "135.0.7049.95-1.1"
-  sha256 arm:   "1335cd24d3d432926486dafcb90d0801975664d544aeab08d58a77457a499998",
-         intel: "d02ae8828615aa261bc1deab6036afbde17a19571da4ca22b38c133794f8a2b7"
+  version "137.0.7151.103-1.1"
+  sha256 arm:   "0432ec269d97077e6d39911f825c92df5b7351173337d86b9be291d53702edff",
+         intel: "89ca92f0cdd5c591757a2450c68c1f4a26b6778e569ec1807f68655617e07125"
 
   url "https://github.com/ungoogled-software/ungoogled-chromium-macos/releases/download/#{version}/ungoogled-chromium_#{version}_#{arch}-macos.dmg",
       verified: "github.com/ungoogled-software/ungoogled-chromium-macos/"
@@ -22,10 +22,7 @@ cask "eloston-chromium" do
     end
   end
 
-  conflicts_with cask: [
-    "chromium",
-    "freesmug-chromium",
-  ]
+  conflicts_with cask: "chromium"
   depends_on macos: ">= :big_sur"
 
   app "Chromium.app"

@@ -11,6 +11,8 @@ cask "font-d2coding-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "D2CodingLigatureNerdFont-Bold.ttf"
   font "D2CodingLigatureNerdFont-Regular.ttf"
   font "D2CodingLigatureNerdFontMono-Bold.ttf"

@@ -11,6 +11,8 @@ cask "font-commit-mono-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "CommitMonoNerdFont-Bold.otf"
   font "CommitMonoNerdFont-BoldItalic.otf"
   font "CommitMonoNerdFont-Italic.otf"

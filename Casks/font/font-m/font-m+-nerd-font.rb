@@ -11,6 +11,8 @@ cask "font-m+-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "M+1CodeNerdFont-Bold.ttf"
   font "M+1CodeNerdFont-ExtraLight.ttf"
   font "M+1CodeNerdFont-Light.ttf"

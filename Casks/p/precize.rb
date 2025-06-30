@@ -1,6 +1,6 @@
 cask "precize" do
-  version "1.15,2024.08"
-  sha256 "59339442a7e662d6de5eafb2779b6811a6d27e0919daa71924b921125c56f66c"
+  version "1.16,2025.06"
+  sha256 "e798832aa867e017a7be4d0dd53ed9c9785155820264c851e2ee552ab767e049"
 
   url "https://eclecticlight.co/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/precize#{version.csv.first.no_dots}.zip"
   name "Precize"
@@ -22,6 +22,8 @@ cask "precize" do
       "#{version.strip},#{match[1]}.#{match[2]}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

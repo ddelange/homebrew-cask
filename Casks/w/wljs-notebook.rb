@@ -1,9 +1,9 @@
 cask "wljs-notebook" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.7.3"
-  sha256 arm:   "e5f841e135a8cc5a061cca10345f82bbfd9a6d8e62f5e59c3e67b5b2f2804ef3",
-         intel: "5215e9e917abf2abc999a848f9f79347c77429d0b71a1b8e37c867728681ef81"
+  version "2.7.8"
+  sha256 arm:   "3a2811d7567452077bae392ed03b719eb6fcbe40fd653a7cae72e1ea6c741efc",
+         intel: "a6a1a4ea3821b7ba941d687bf35baeb1dffb63b77758d7edf403842810e2fc94"
 
   url "https://github.com/JerryI/wolfram-js-frontend/releases/download/v#{version.csv.second || version.csv.first}/wljs-notebook-#{version.csv.first}-#{arch}-macos.dmg",
       verified: "github.com/JerryI/wolfram-js-frontend/"

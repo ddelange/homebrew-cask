@@ -1,9 +1,9 @@
 cask "mediathekview" do
   arch arm: "mac-as", intel: "mac"
 
-  version "14.2.0"
-  sha256 arm:   "1870dd359e48856f16a4656229e6a15ce5caeb22d877f6504a479afb95559b8d",
-         intel: "bfebfce084372713483bd5cb884b6a3812e6e2e1c8ed5afad5f9ab1aff323d22"
+  version "14.3.1"
+  sha256 arm:   "44a9919d62e0b8920c8281075669c314dd7d053d8bd0f8fa88f52571ef78da2e",
+         intel: "5483db1bcb45b5b9246cfda41d307cf70eec887bd9be212c668783c0119912a3"
 
   url "https://download.mediathekview.de/stabil/MediathekView-#{version}-#{arch}.dmg"
   name "MediathekView"

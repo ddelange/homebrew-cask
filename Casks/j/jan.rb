@@ -1,8 +1,8 @@
 cask "jan" do
-  version "0.5.16"
-  sha256 "0dee92a051db16471a1b91a91b54263d6c780865fa7bc9cd7ed46a9f141a1b82"
+  version "0.6.3"
+  sha256 "2a93f2f2b9f7da53fc4e213c8a18489af885f1a82cd2a4d5f5fd07e8e3702623"
 
-  url "https://github.com/janhq/jan/releases/download/v#{version}/jan-mac-universal-#{version}.dmg",
+  url "https://github.com/janhq/jan/releases/download/v#{version}/jan-mac-universal-#{version}.zip",
       verified: "github.com/janhq/jan/"
   name "Jan"
   desc "Offline AI chat tool"

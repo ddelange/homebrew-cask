@@ -1,5 +1,5 @@
 cask "virtual-ii" do
-  version "12.1.1"
+  version "13.0.1"
   sha256 :no_check
 
   url "https://virtualii.com/VirtualII.dmg"
@@ -16,6 +16,8 @@ cask "virtual-ii" do
       version.strip
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :monterey"
 

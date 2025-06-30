@@ -1,6 +1,6 @@
 cask "virtualbuddy@beta" do
-  version "2.0,210"
-  sha256 "1c1b1bd2e24d61129fad84e6775f83d0ef33f10ad0485ff72ffc9465381d94d7"
+  version "2.1,317"
+  sha256 "16f1163b2a827cc2005cb931a5501ce7eb17facbf2cfa2595f308ea6622c8bc4"
 
   url "https://su.virtualbuddy.app/beta/VirtualBuddy_v#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "su.virtualbuddy.app/"
@@ -18,6 +18,7 @@ cask "virtualbuddy@beta" do
   depends_on macos: ">= :ventura"
 
   app "VirtualBuddy.app"
+  binary "#{appdir}/VirtualBuddy.app/Contents/MacOS/vctool", target: "vctool"
 
   zap trash: [
     "~/Library/Application Support/VirtualBuddy",

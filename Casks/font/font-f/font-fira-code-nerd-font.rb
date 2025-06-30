@@ -11,6 +11,8 @@ cask "font-fira-code-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "FiraCodeNerdFont-Bold.ttf"
   font "FiraCodeNerdFont-Light.ttf"
   font "FiraCodeNerdFont-Medium.ttf"

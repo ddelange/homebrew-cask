@@ -15,12 +15,13 @@ cask "filebot" do
     regex(/href=.*?FileBot[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.pkg/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :catalina"
 
   app "FileBot.app"
   binary "#{appdir}/FileBot.app/Contents/MacOS/filebot.sh", target: "filebot"
-  binary "#{appdir}/FileBot.app/Contents/Resources/bash_completion.d/filebot_completion",
-         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/filebot"
+  bash_completion "#{appdir}/FileBot.app/Contents/Resources/bash_completion.d/filebot_completion", target: "filebot"
 
   zap trash: [
     "~/Library/Application Scripts/net.filebot.FileBot",

@@ -11,6 +11,8 @@ cask "font-proggy-clean-tt-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "ProggyCleanCENerdFont-Regular.ttf"
   font "ProggyCleanCENerdFontMono-Regular.ttf"
   font "ProggyCleanCENerdFontPropo-Regular.ttf"

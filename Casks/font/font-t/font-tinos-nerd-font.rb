@@ -11,6 +11,8 @@ cask "font-tinos-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "TinosNerdFont-Bold.ttf"
   font "TinosNerdFont-BoldItalic.ttf"
   font "TinosNerdFont-Italic.ttf"

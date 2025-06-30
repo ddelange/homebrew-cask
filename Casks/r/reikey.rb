@@ -8,6 +8,11 @@ cask "reikey" do
   desc "Scans, detects, and monitors keyboard taps"
   homepage "https://objective-see.org/products/reikey.html"
 
+  livecheck do
+    url :homepage
+    regex(/href=.*?ReiKey[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+  end
+
   depends_on macos: ">= :high_sierra"
 
   installer script: {

@@ -1,6 +1,6 @@
 cask "vym" do
-  version "2.9.22"
-  sha256 "4859da0de9bc32f183ef2c73af63665b4962303f950c924a8baad903bfd2f418"
+  version "2.9.577"
+  sha256 "76735fd8453e71af84d0631ffb3af663205e7fee7e8a355864ac598aafa2e1c5"
 
   url "https://downloads.sourceforge.net/vym/vym-#{version}.dmg"
   name "VYM (View Your Mind)"

@@ -24,10 +24,13 @@ cask "little-snitch@5" do
   desc "Host-based application firewall"
   homepage "https://www.obdev.at/products/littlesnitch/index.html"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   conflicts_with cask: [
     "little-snitch",
     "little-snitch@4",
+    "little-snitch@nightly",
   ]
   depends_on macos: ">= :big_sur"
 

@@ -16,11 +16,18 @@ cask "keepassxc@beta" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "keepassxc"
-  depends_on macos: ">= :high_sierra"
+  no_autobump! because: :requires_manual_review
+
+  conflicts_with cask: [
+    "keepassxc",
+    "keepassxc@snapshot",
+  ]
+  depends_on macos: ">= :monterey"
 
   app "KeePassXC.app"
   binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"
+  manpage "#{appdir}/KeePassXC.app/Contents/Resources/man/man1/keepassxc.1"
+  manpage "#{appdir}/KeePassXC.app/Contents/Resources/man/man1/keepassxc-cli.1"
 
   uninstall quit: "org.keepassxc.keepassxc"
 
@@ -30,6 +37,7 @@ cask "keepassxc@beta" do
     "~/Library/Application Support/keepassxc",
     "~/Library/Caches/org.keepassx.keepassxc",
     "~/Library/Logs/DiagnosticReports/KeePassXC_*.crash",
+    "~/Library/Preferences/keepassxc.keepassxc.plist",
     "~/Library/Preferences/org.keepassx.keepassxc.plist",
     "~/Library/Saved Application State/org.keepassx.keepassxc.savedState",
   ]

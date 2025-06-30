@@ -11,6 +11,8 @@ cask "font-mononoki-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "MononokiNerdFont-Bold.ttf"
   font "MononokiNerdFont-BoldItalic.ttf"
   font "MononokiNerdFont-Italic.ttf"

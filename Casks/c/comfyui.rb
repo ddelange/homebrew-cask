@@ -1,6 +1,6 @@
 cask "comfyui" do
-  version "0.4.41,250425eeib543v3"
-  sha256 "48427a3d0afa588940250e1a82679b6dc5fc5d548924af96b95b433a77644444"
+  version "0.4.54,250627l6sir2rce"
+  sha256 "75004b95fd751893b2f0f2a719073a83f314db28ba4a9b5bd8f7809c49e0d3e1"
 
   url "https://download.todesktop.com/241012ess7yxs0e/ComfyUI%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-arm64-mac.zip",
       verified: "download.todesktop.com/241012ess7yxs0e/"

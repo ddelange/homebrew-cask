@@ -1,8 +1,8 @@
 cask "vitalsource-bookshelf" do
-  version "11.0.3.3286"
-  sha256 "e1f5b9de0f40a5ac5380136b187ac6047a15c0c792ade531f8effaf6563167ff"
+  version "11.1.0.3378"
+  sha256 "bcfe4951d809255cc09c89179f04db8668683018b19562b81a8e7aab8d058296"
 
-  url "https://downloads.vitalbook.com/vsti/bookshelf/#{version.major_minor_patch}/mac/bookshelf/VitalSource-Bookshelf_#{version}.dmg",
+  url "https://downloads.vitalbook.com/vsti/bookshelf/#{version.major_minor}/mac/bookshelf/VitalSource-Bookshelf_#{version}.dmg",
       verified: "downloads.vitalbook.com/vsti/bookshelf/"
   name "VitalSource Bookshelf"
   desc "Access etextbooks"
@@ -12,6 +12,8 @@ cask "vitalsource-bookshelf" do
     url "https://support.vitalsource.com/api/v2/help_center/en-us/articles/360014107913"
     regex(/href=.*?VitalSource[._-]Bookshelf[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :big_sur"
 

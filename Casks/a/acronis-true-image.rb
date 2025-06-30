@@ -1,6 +1,6 @@
 cask "acronis-true-image" do
-  version "29.2,41725"
-  sha256 "c9ceaac10458342db211f91a18c776f9cba24f75a6828c72e425f0afecf632c2"
+  version "29.2,42065"
+  sha256 "0bee00e25cf777d2ff059fadae300699dc062adbc0b995819da17897104afffa"
 
   url "https://dl.acronis.com/u/AcronisTrueImage_#{version.csv.second}.dmg"
   name "Acronis True Image"
@@ -11,6 +11,8 @@ cask "acronis-true-image" do
     url "https://dl.acronis.com/u/liveupdate/%7B5D9634EB-1C51-4B57-BA9A-379CAF84E040%7D/appcast.xml"
     strategy :sparkle
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :big_sur"

@@ -1,6 +1,6 @@
 cask "movist-pro" do
-  version "2.13.0"
-  sha256 "5f85a8d54ebda88d3b38cbb99c21c54982e93d777fec69e78e60ee92a309a822"
+  version "2.13.1"
+  sha256 "4321047175f6503c09bf03ae94d53b42cc9ce98d6279d79bf69285d4cda9a058"
 
   url "https://s3.ap-northeast-2.amazonaws.com/update.cocoable.com/MovistPro_#{version}.dmg",
       verified: "s3.ap-northeast-2.amazonaws.com/update.cocoable.com/"
@@ -12,6 +12,8 @@ cask "movist-pro" do
     url "https://s3.ap-northeast-2.amazonaws.com/update.cocoable.com/appcast.xml"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

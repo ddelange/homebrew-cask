@@ -1,6 +1,6 @@
 cask "lynkeos" do
-  version "3.8"
-  sha256 "b018e9812561cf1cc6a0dd0483c1770a4dcb4295c67cf43c17bea83e8449d40a"
+  version "3.9"
+  sha256 "b1236393e7ca75ed782daaf8b76f3230ef83764a56b3a388a9b5e7c5d6e0be25"
 
   url "https://downloads.sourceforge.net/lynkeos/lynkeos/#{version}/Lynkeos-App-#{version.dots_to_hyphens}.zip",
       verified: "downloads.sourceforge.net/lynkeos/"
@@ -12,6 +12,8 @@ cask "lynkeos" do
     url "https://sourceforge.net/projects/lynkeos/rss?path=/lynkeos"
     regex(%r{url=.*?/v?(\d+(?:\.\d+)+)/Lynkeos[._-]App[\d._-]*\.zip}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

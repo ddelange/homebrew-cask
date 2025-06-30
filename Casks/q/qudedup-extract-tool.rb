@@ -12,7 +12,7 @@ cask "qudedup-extract-tool" do
     strategy :xml do |xml|
       item = xml.elements[
         "//application[productName[text()='QuDedup Extract Tool']]" \
-        "/platform[platformName[text()='Mac']]/software"
+        "/platform[platformName[text()='Mac']]/software",
       ]
       next if item.blank?
 
@@ -23,6 +23,8 @@ cask "qudedup-extract-tool" do
       "#{version},#{build}"
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "QudedupExTool.pkg"
 

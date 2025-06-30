@@ -1,5 +1,5 @@
 cask "macx-youtube-downloader" do
-  version "5.3.4"
+  version "5.3.6"
   sha256 :no_check
 
   url "https://www.macxdvd.com/download/macx-youtube-downloader-free.dmg"
@@ -16,6 +16,8 @@ cask "macx-youtube-downloader" do
       version.strip
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "MacX YouTube Downloader.app"
 

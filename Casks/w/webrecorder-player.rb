@@ -6,7 +6,9 @@ cask "webrecorder-player" do
   name "Webrecorder Player"
   homepage "https://github.com/webrecorder/webrecorder-player/"
 
-  disable! date: "2024-12-16", because: :discontinued
+  no_autobump! because: :requires_manual_review
+
+  disable! date: "2024-12-16", because: :discontinued, replacement_cask: "replaywebpage"
 
   app "Webrecorder Player.app"
 

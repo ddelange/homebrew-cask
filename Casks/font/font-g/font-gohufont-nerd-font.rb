@@ -11,6 +11,8 @@ cask "font-gohufont-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "GohuFont11NerdFont-Regular.ttf"
   font "GohuFont11NerdFontMono-Regular.ttf"
   font "GohuFont11NerdFontPropo-Regular.ttf"

@@ -1,6 +1,6 @@
 cask "kiwi-for-gmail" do
-  version "4.3.0"
-  sha256 "171a363e804ad4cabf4e30c83ab84a46ce275493adbdadf2badae029bf152eff"
+  version "4.3.2"
+  sha256 "484ad9ad531e1f15a412634aef7c031bf0a84e457edce30696505faee18933ac"
 
   url "https://downloads.kiwiforgmail.com/kiwi/release/consumer/Kiwi%20for%20Gmail-#{version}-universal-mac.zip"
   name "Kiwi for Gmail"

@@ -1,8 +1,8 @@
 cask "feedflow" do
-  version "1.1.4"
-  sha256 "dc053599f0b06c76230c1a62c76333a5570ddceb878cf99132d3fad95b89c874"
+  version "1.2.0"
+  sha256 "d0509a2fe08b451a97e41d65d096c4cb06d4dd1267144469c20ba3ac55f98bfb"
 
-  url "https://github.com/prof18/feed-flow/releases/download/#{version}-desktop/FeedFlow-#{version}.dmg",
+  url "https://github.com/prof18/feed-flow/releases/download/#{version}-all/FeedFlow-#{version}.dmg",
       verified: "github.com/prof18/feed-flow/"
   name "FeedFlow"
   desc "RSS reader"

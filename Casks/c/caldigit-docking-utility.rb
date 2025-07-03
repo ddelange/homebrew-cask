@@ -1,7 +1,7 @@
 cask "caldigit-docking-utility" do
   arch arm: "arm", intel: "x86"
 
-  version "1.9.34"
+  version "1.9.35"
   sha256 :no_check
 
   url "https://downloads.caldigit.com/CalDigit-Docking-Station-Utility.zip"
@@ -12,6 +12,8 @@ cask "caldigit-docking-utility" do
   livecheck do
     skip "No version information available"
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "CalDigit Docking Station Utility v#{version}.pkg"
 

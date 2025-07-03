@@ -1,11 +1,11 @@
 cask "android-platform-tools" do
   os macos: "darwin", linux: "linux"
 
-  version "35.0.2"
-  sha256 arm:          "1820078db90bf21628d257ff052528af1c61bb48f754b3555648f5652fa35d78",
-         x86_64:       "1820078db90bf21628d257ff052528af1c61bb48f754b3555648f5652fa35d78",
-         x86_64_linux: "acfdcccb123a8718c46c46c059b2f621140194e5ec1ac9d81715be3d6ab6cd0a",
-         arm64_linux:  "acfdcccb123a8718c46c46c059b2f621140194e5ec1ac9d81715be3d6ab6cd0a"
+  version "36.0.0"
+  sha256 arm:          "d3e9fa1df3345cf728586908426615a60863d2632f73f1ce14f0f1349ef000fd",
+         x86_64:       "d3e9fa1df3345cf728586908426615a60863d2632f73f1ce14f0f1349ef000fd",
+         x86_64_linux: "0ead642c943ffe79701fccca8f5f1c69c4ce4f43df2eefee553f6ccb27cbfbe8",
+         arm64_linux:  "0ead642c943ffe79701fccca8f5f1c69c4ce4f43df2eefee553f6ccb27cbfbe8"
 
   url "https://dl.google.com/android/repository/platform-tools_r#{version}-#{os}.zip",
       verified: "google.com/android/repository/"
@@ -17,6 +17,8 @@ cask "android-platform-tools" do
     url :homepage
     regex(/data-text=["']?[^"' >]*?v?(\d+(?:\.\d+)+)["'> (]/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   binary "#{staged_path}/platform-tools/adb"
   binary "#{staged_path}/platform-tools/etc1tool"

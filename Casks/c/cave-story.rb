@@ -25,6 +25,8 @@ cask "cave-story" do
 
     # Renamed for consistency: app name is different in the Finder and in a shell.
     app "Doukutsu.app", target: "Cave Story.app"
+
+    "en-US"
   end
   language "ja" do
     on_mojave :or_older do
@@ -53,6 +55,8 @@ cask "cave-story" do
 
     # Renamed for consistency: app name is different in the Finder and in a shell.
     app "Doukutsu.app", target: "洞窟物語.app"
+
+    "ja-JP-mac"
   end
 
   name "Cave Story"
@@ -60,6 +64,8 @@ cask "cave-story" do
   name "洞窟物語"
   desc "Action-adventure game reminiscent of classic 8- and 16-bit games"
   homepage "https://www.cavestory.org/"
+
+  no_autobump! because: :requires_manual_review
 
   zap trash: "~/Library/Preferences/com.nakiwo.Doukutsu.plist"
 

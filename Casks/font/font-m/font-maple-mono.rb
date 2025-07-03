@@ -1,6 +1,6 @@
 cask "font-maple-mono" do
-  version "7.2"
-  sha256 "d7043ded39b604df9b6b63b1a27c9ea2f9795252e8a18ad87e4ac0f390906663"
+  version "7.4"
+  sha256 "820009abd4a0f22d655e913a69d36a8555c91f903537b75eaec90dfd94e7f8a1"
 
   url "https://github.com/subframe7536/Maple-font/releases/download/v#{version}/MapleMono-TTF.zip",
       verified: "github.com/subframe7536/Maple-font/"

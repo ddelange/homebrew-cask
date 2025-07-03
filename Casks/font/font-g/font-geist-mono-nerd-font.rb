@@ -11,6 +11,8 @@ cask "font-geist-mono-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "GeistMonoNerdFont-Black.otf"
   font "GeistMonoNerdFont-Bold.otf"
   font "GeistMonoNerdFont-Light.otf"

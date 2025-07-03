@@ -12,8 +12,6 @@ cask "piezo" do
       url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1431&bundleid=com.rogueamoeba.Piezo&platform=osx&version=#{version.no_dots}8000"
       strategy :sparkle
     end
-
-    depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "1.9.5"
@@ -25,8 +23,6 @@ cask "piezo" do
       strategy :sparkle
     end
 
-    depends_on macos: ">= :sonoma"
-
     # NOTE: See https://www.rogueamoeba.com/support/knowledgebase/?showCategory=Piezo
     caveats "Piezo #{version} requires macOS 14.4 or higher."
   end
@@ -35,7 +31,10 @@ cask "piezo" do
   desc "Audio recording application"
   homepage "https://rogueamoeba.com/piezo/"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Piezo.app"
 

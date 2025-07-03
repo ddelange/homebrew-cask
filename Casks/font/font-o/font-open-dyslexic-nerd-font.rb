@@ -11,6 +11,8 @@ cask "font-open-dyslexic-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "OpenDyslexicAltNerdFont-Bold.otf"
   font "OpenDyslexicAltNerdFont-BoldItalic.otf"
   font "OpenDyslexicAltNerdFont-Italic.otf"

@@ -1,6 +1,6 @@
 cask "plotdigitizer" do
-  version "2.6.11b"
-  sha256 "55bd67c08b169ad9122a1f0e55d80d4e5e8da3a7787e1e0595a0bd27f9dadaad"
+  version "2.6.12"
+  sha256 "46542758d70e80e194bf1ae7d1da31415bf91635f13782bc460d10af9568b987"
 
   url "https://downloads.sourceforge.net/plotdigitizer/plotdigitizer/#{version}/PlotDigitizer_MacOS.dmg"
   name "Plot Digitizer"
@@ -11,6 +11,8 @@ cask "plotdigitizer" do
     url "https://sourceforge.net/projects/plotdigitizer/rss?path=/plotdigitizer"
     regex(%r{url=.*?/v?(\d+(?:\.\d+)+[a-z]?)/PlotDigitizer(?:[._-]v?\d+(?:\.\d+)+)?[._-]MacOSX?\.dmg}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "Plot Digitizer.app"
 

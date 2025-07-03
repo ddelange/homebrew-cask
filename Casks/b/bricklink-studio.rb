@@ -1,16 +1,16 @@
 cask "bricklink-studio" do
-  version "2.25.4_1"
-  sha256 "a858ef3553875e542960fa311dc108fad3c59c4fc42e4700183a1b5748de8d2e"
+  version "2.25.6_1"
+  sha256 "bc28e45fdb0c8281023925336a59b64fde22ee954f1002aee5518af319538f0d"
 
-  url "https://blstudio.s3.amazonaws.com/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg",
-      verified: "blstudio.s3.amazonaws.com/"
+  url "https://studio.download.bricklink.info/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg",
+      verified: "studio.download.bricklink.info/"
   name "Studio"
   desc "Build, render, and create LEGO instructions"
   homepage "https://www.bricklink.com/v3/studio/download.page"
 
   livecheck do
-    url "https://store.bricklink.com/v2/studio/download.page"
-    regex(/"version"\s*:\s*"(\d+(?:[._-]\d+)*)"/i)
+    url :homepage
+    regex(/"strVersion"\s*:\s*"([^"]+)"/i)
   end
 
   auto_updates true
@@ -27,8 +27,4 @@ cask "bricklink-studio" do
     "~/Library/Saved Application State/unity.BrickLink.Patcher.savedState",
     "~/Library/Saved Application State/unity.BrickLink.Studio.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

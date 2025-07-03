@@ -11,6 +11,8 @@ cask "font-3270-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "3270NerdFont-Condensed.ttf"
   font "3270NerdFont-Regular.ttf"
   font "3270NerdFont-SemiCondensed.ttf"

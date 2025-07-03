@@ -1,5 +1,5 @@
 cask "honto" do
-  version "6.67.0"
+  version "6.70.0"
   sha256 :no_check
 
   url "https://dl.honto.jp/macapp/honto.dmg"
@@ -12,6 +12,8 @@ cask "honto" do
     url "https://honto.jp/view_interface.php?blockId=9257819"
     regex(%r{Mac\s*<br\s*/?>\s*Ver[._-]v?(\d+(?:\.\d+)+)}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :mojave"
 

@@ -1,7 +1,7 @@
 cask "wiso-steuer-2025" do
   # NOTE: "2025" is not a version number, but an intrinsic part of the product name
-  version "32.06.2340-RC2,32.06.2340-b"
-  sha256 "a4cd10626d6671fce0ac34589c995b9960ec5b06d588c8ed317521362c075963"
+  version "32.09.2600-RC1,32.09.2600"
+  sha256 "d8874a21024f8a40dfd404a3d053e2822f9327aa4aaa734fec53748ba8a88595"
 
   url "https://update.buhl-data.com/Updates/Steuer/2025/Mac/Files/#{version.csv.first}/SteuerMac2025-#{version.csv.second || version.csv.first.split("-").first}.dmg",
       verified: "update.buhl-data.com/Updates/Steuer/"

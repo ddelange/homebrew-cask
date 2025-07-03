@@ -11,6 +11,8 @@ cask "font-envy-code-r" do
     regex(%r{href=.*?original/EnvyCodeR[._-](.*)\.zip}i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "Envy Code R #{version}/Envy Code R Bold.ttf"
   font "Envy Code R #{version}/Envy Code R Italic.ttf"
   font "Envy Code R #{version}/Envy Code R.ttf"

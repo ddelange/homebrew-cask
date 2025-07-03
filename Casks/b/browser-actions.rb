@@ -1,6 +1,6 @@
 cask "browser-actions" do
-  version "2025.1.1,4613"
-  sha256 "1c3be09e290f8e059753b32af73ddc830db1cc10ef1dd35d201ca5b49cf5c899"
+  version "2025.1.3,4969"
+  sha256 "67d5ace8822653d164bff7552548361323e64091c5665ac37bb1170f3f46c372"
 
   url "https://downloads.actions.work/browser-actions/Browser_Actions_#{version.csv.first}_(#{version.csv.second}).dmg"
   name "Browser Actions"

@@ -1,6 +1,6 @@
 cask "kicad" do
-  version "9.0.1"
-  sha256 "783f6d7e408ab65f59c0008f8f0464ad8bb64028b0194979be7280c0af7b0719"
+  version "9.0.2"
+  sha256 "4c5e28dd755c86a02f7934682d6ff1797c1c098079c599d5092dd285768c848e"
 
   url "https://github.com/KiCad/kicad-source-mirror/releases/download/#{version}/kicad-unified-universal-#{version}.dmg",
       verified: "github.com/KiCad/kicad-source-mirror/"
@@ -16,18 +16,18 @@ cask "kicad" do
   depends_on macos: ">= :big_sur"
 
   suite "KiCad"
-  binary "KiCad/KiCad.app/Contents/MacOS/dxf2idf"
-  binary "KiCad/KiCad.app/Contents/MacOS/idf2vrml"
-  binary "KiCad/KiCad.app/Contents/MacOS/idfcyl"
-  binary "KiCad/KiCad.app/Contents/MacOS/idfrect"
-  binary "KiCad/KiCad.app/Contents/MacOS/kicad-cli"
+  binary "#{appdir}/KiCad/KiCad.app/Contents/MacOS/dxf2idf"
+  binary "#{appdir}/KiCad/KiCad.app/Contents/MacOS/idf2vrml"
+  binary "#{appdir}/KiCad/KiCad.app/Contents/MacOS/idfcyl"
+  binary "#{appdir}/KiCad/KiCad.app/Contents/MacOS/idfrect"
+  binary "#{appdir}/KiCad/KiCad.app/Contents/MacOS/kicad-cli"
   artifact "demos", target: "/Library/Application Support/kicad/demos"
 
-  zap trash: [
-    "/Library/Application Support/kicad",
-    "~/Library/Application Support/kicad",
-    "~/Library/Preferences/kicad",
-    "~/Library/Preferences/org.kicad-pcb.*",
-    "~/Library/Saved Application State/org.kicad-pcb.*",
-  ]
+  zap delete: "/Library/Application Support/kicad",
+      trash:  [
+        "~/Library/Application Support/kicad",
+        "~/Library/Preferences/kicad",
+        "~/Library/Preferences/org.kicad-pcb.*",
+        "~/Library/Saved Application State/org.kicad-pcb.*",
+      ]
 end

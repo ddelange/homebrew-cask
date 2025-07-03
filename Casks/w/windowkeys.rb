@@ -1,8 +1,8 @@
 cask "windowkeys" do
-  version "2.0"
-  sha256 "3d61541514e30e879b8eff43f4436702d99b3a66d72ebeb008ad2210fc8e2846"
+  version "3.0.1"
+  sha256 "38600e9ffc6488ec08a703bfeaa0f760efb4a26d6d1152e87e5f4f01355af8eb"
 
-  url "https://cdn.apptorium.com/products/windowkeys/releases/WindowKeys-#{version}.zip"
+  url "https://www.apptorium.com/public/products/windowkeys/releases/WindowKeys-#{version}.zip"
   name "WindowKeys"
   desc "Window-tiling keyboard shortcuts"
   homepage "https://www.apptorium.com/windowkeys"

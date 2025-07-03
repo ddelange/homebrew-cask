@@ -11,6 +11,8 @@ cask "font-meslo-lg-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "MesloLGLDZNerdFont-Bold.ttf"
   font "MesloLGLDZNerdFont-BoldItalic.ttf"
   font "MesloLGLDZNerdFont-Italic.ttf"

@@ -11,6 +11,8 @@ cask "font-im-writing-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "iMWritingDuoNerdFont-Bold.ttf"
   font "iMWritingDuoNerdFont-BoldItalic.ttf"
   font "iMWritingDuoNerdFont-Italic.ttf"

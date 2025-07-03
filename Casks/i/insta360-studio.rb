@@ -1,6 +1,6 @@
 cask "insta360-studio" do
-  version "5.6.1,release_insta360,RC_build77,_20250423_182741_signed_1745404160548,853d15d183f62b2574b25f7717a20666"
-  sha256 "97a25106f337be8a8a2896485b2c97027f1d69c6561ee9bdd82f3a9f1b8a5c37"
+  version "5.6.4,release_insta360,RC_build65,_20250630_151425_signed_1751267755970,a028cfd724beaf477ca68bd74321cc2a"
+  sha256 "8b353d9cdf254a87b6e0c9d180688000fa008336e0c5220672fa7ad70ebe9b9d"
 
   url "https://file.insta360.com/static/#{version.csv.fifth}/Insta360Studio_#{version.csv.first}_#{version.csv.second}(#{version.csv.third})#{version.csv.fourth}.pkg"
   name "Insta360 Studio"
@@ -50,9 +50,9 @@ cask "insta360-studio" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/Insta360",
+    "~/Library/Application Support/Insta360/Insta360 Studio",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.insta360.studio",
-    "~/Library/Caches/Insta360",
+    "~/Library/Caches/Insta360/Insta360 Studio",
     "~/Library/Saved Application State/com.insta360.studio.savedState",
   ]
 end

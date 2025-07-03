@@ -11,6 +11,8 @@ cask "font-agave-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "AgaveNerdFont-Bold.ttf"
   font "AgaveNerdFont-Regular.ttf"
   font "AgaveNerdFontMono-Bold.ttf"

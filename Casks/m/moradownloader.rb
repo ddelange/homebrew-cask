@@ -1,5 +1,5 @@
 cask "moradownloader" do
-  version "2.0.0.7"
+  version "2.0.0.8"
   sha256 :no_check
 
   url "https://downloader.mora.jp/mac/MoraDownloader.pkg"
@@ -17,6 +17,8 @@ cask "moradownloader" do
       match[1]
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "MoraDownloader.pkg"
 

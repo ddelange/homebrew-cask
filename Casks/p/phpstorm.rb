@@ -1,9 +1,9 @@
 cask "phpstorm" do
   arch arm: "-aarch64"
 
-  version "2025.1.0.1,251.23774.466"
-  sha256 arm:   "9b3b87a8980cf067a84acc56a8b02590a146314304dbb4d340e3474783a54071",
-         intel: "55a9d94b8f6fe5c0d0e29e6d77a3981f7e419d7f09a855cc7fd62f3625389863"
+  version "2025.1.3,251.26927.60"
+  sha256 arm:   "34cb7ddf548f2a2883560e8b7a861d587a299b864e30cb8311cd37ec4ad54517",
+         intel: "abd27a6baffba215f6e25d79a6cd538736bca1e6d481563455b4a0621dd7fabc"
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version.csv.first}#{arch}.dmg"
   name "JetBrains PhpStorm"
@@ -27,7 +27,16 @@ cask "phpstorm" do
   depends_on macos: ">= :high_sierra"
 
   app "PhpStorm.app"
-  binary "#{appdir}/PhpStorm.app/Contents/MacOS/phpstorm"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/phpstorm.wrapper.sh"
+  binary shimscript, target: "phpstorm"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/PhpStorm.app/Contents/MacOS/phpstorm' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/JetBrains/consentOptions",

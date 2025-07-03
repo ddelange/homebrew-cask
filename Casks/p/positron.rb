@@ -1,14 +1,14 @@
 cask "positron" do
-  version "2025.04.0-250"
-  sha256 "5fd2381584562940606597dae192625c12ceec6c3ba247b4eb62fa5c075ff6b8"
+  version "2025.07.0-204"
+  sha256 "7f5110c3a7ca1f8a60546efe61c2cfbfa15ac09d93379d3b8582c3d299fe3e53"
 
-  url "https://cdn.posit.co/positron/prereleases/mac/universal/Positron-#{version}.dmg"
+  url "https://cdn.posit.co/positron/releases/mac/universal/Positron-#{version}-universal.dmg"
   name "Positron"
   desc "Data science IDE"
   homepage "https://positron.posit.co/"
 
   livecheck do
-    url "https://cdn.posit.co/positron/prereleases/mac/universal/releases.json"
+    url "https://cdn.posit.co/positron/releases/mac/universal/releases.json"
     strategy :json do |json|
       json["version"]
     end

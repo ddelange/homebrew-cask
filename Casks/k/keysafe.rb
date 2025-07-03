@@ -1,6 +1,6 @@
 cask "keysafe" do
-  version "1.7.0"
-  sha256 "974c1fc807566b12cb4bf9706d085837d7815100e80edde1816840745814e5be"
+  version "1.9.0"
+  sha256 "2e56b0ad8b1661e0ed851d7a01fddcd5f4a608f79d75c4f4d6964983fd8de9da"
 
   url "https://miln.eu/keysafe/miln-keysafe-v#{version}-darwin-universal.zip"
   name "Keysafe"

@@ -1,9 +1,9 @@
 cask "block-goose" do
   arch intel: "_intel_mac"
 
-  version "1.0.21"
-  sha256 arm:   "71d36a1100aab065ddb19ba57fd152388b055e5d5bce6e70e47372eee0bee645",
-         intel: "3d2d5f5cda526b03be7a8e29c104c560a22a779339dd1713919c343cd4f73aeb"
+  version "1.0.35"
+  sha256 arm:   "8c5c6054c5a936c80bfb05208b31927f7bd1be682e80cb7013509028b7d5aa51",
+         intel: "500931661dbf4b193d2633a906265e8c725098dc1770542401d372b1fb4753ab"
 
   url "https://github.com/block/goose/releases/download/v#{version}/Goose#{arch}.zip",
       verified: "github.com/block/goose/"
@@ -13,7 +13,7 @@ cask "block-goose" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   depends_on macos: ">= :big_sur"

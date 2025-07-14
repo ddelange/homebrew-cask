@@ -1,5 +1,5 @@
 cask "mailmate@beta" do
-  version "6222"
+  version "6272"
   sha256 :no_check
 
   url "https://updates.mailmate-app.com/archives/MailMateBeta.tbz",
@@ -12,6 +12,8 @@ cask "mailmate@beta" do
     url "https://updates.mailmate-app.com/beta_release_notes"
     regex(/Revision\s(\d+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   conflicts_with cask: "mailmate"
   depends_on macos: ">= :sierra"

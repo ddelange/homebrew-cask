@@ -1,14 +1,14 @@
 cask "netxms-console" do
   arch arm: "-aarch64"
 
-  version "5.2.1"
-  sha256 arm:   "8868589e0d3947524ec812bd2e449c71cd6325dc29a96edfb94b5259a4572020",
-         intel: "2637d1e599f6b99c19d2af8067298bca6d5300fffb33ca8b79b892222a36b3a0"
+  version "5.2.4"
+  sha256 arm:   "a5a43d25fa444fa3275119ba28e35dd81740c6245a63a50e5c02e3b5b5006f57",
+         intel: "b6488ed77a552d9b712ea5b7d00fbd3e9b31a8d79293e16ff8fc78cb2cb1d0ce"
 
-  url "https://netxms.org/download/releases/#{version.major_minor}/nxmc-#{version}#{arch}.dmg"
+  url "https://netxms.com/download/releases/#{version.major_minor}/nxmc-#{version}#{arch}.dmg"
   name "NetXMS Management Console"
   desc "Network and infrastructure monitoring and management system"
-  homepage "https://netxms.org/"
+  homepage "https://netxms.com/"
 
   livecheck do
     url "https://netxms.com/downloads/"

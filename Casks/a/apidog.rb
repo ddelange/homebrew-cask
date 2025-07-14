@@ -2,9 +2,9 @@ cask "apidog" do
   arch arm: "-macOS-arm64"
   livecheck_folder = on_arch_conditional arm: "-arm64"
 
-  version "2.7.7"
-  sha256 arm:   "506c0a6a531f35152091fa3ba4d6209ffa1bc145b4292d8704638da94e63262e",
-         intel: "22e7defd896dc6cf74d2652c0e13542cccb8c51094b4e394d2ef438ef476da2e"
+  version "2.7.22"
+  sha256 arm:   "81fdf50bd141c12dcafdc33ccdb8b42dd6202f2ecc7c153a1bb2b281a03e8c91",
+         intel: "f2661e539519888df36fc52f77ae5479e7e3e8cf0334fb876bd45c4e7f89ce62"
 
   url "https://file-assets.apidog.com/download/#{version}/legacy-Apidog#{arch}-#{version}.dmg"
   name "Apidog"

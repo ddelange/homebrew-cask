@@ -2,11 +2,11 @@ cask "wizcli" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "0.81.0"
-  sha256 arm:          "5b21760aee91d6cf29b3d9425446a50a50fed44d5f44460bf9bbeed0614c4289",
-         x86_64:       "8fc06218d7174aae820db6b0a25c4fd40a3ba09fe8819227b4d9febbec90f78c",
-         arm64_linux:  "91d7d0b919f6f8925c5c87fefd1acfe3c65698f39205c107bb57e7d563748533",
-         x86_64_linux: "b21b6eb20870d70645f7520607ae81b120ffbe265a0c9e2b49dc9f09705b65f4"
+  version "0.89.0"
+  sha256 arm:          "1c57c7f2306f819da457b7e6d20592a7fdbca1bf22f9fc64e5bbd5f9ae9c81e5",
+         x86_64:       "426f9c3de33f78a88a5cfeee381c298b519394f0c14ee9d61c53a2997bf79186",
+         arm64_linux:  "5ebf1cf8c33edfeb1e9babd2d141bb0d5389993a676e0e2be57973d02f6992d6",
+         x86_64_linux: "dddaf24ec429ba2ab5878d1acbcabf29c9396e42a3ef0f9cd201514b6ad288f3"
 
   url "https://downloads.wiz.io/wizcli/#{version}/wizcli-#{os}-#{arch}"
   name "Wiz CLI"

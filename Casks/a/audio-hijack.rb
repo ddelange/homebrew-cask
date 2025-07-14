@@ -2,7 +2,7 @@ cask "audio-hijack" do
   sha256 :no_check
 
   on_ventura :or_older do
-    version "4.3.3"
+    version "4.3.4"
 
     url "https://cdn.rogueamoeba.com/audiohijack/download/AudioHijack-ACE.zip"
 
@@ -12,11 +12,9 @@ cask "audio-hijack" do
       url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1431&bundleid=com.rogueamoeba.audiohijack&platform=osx&version=#{version.no_dots}8000"
       strategy :sparkle
     end
-
-    depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
-    version "4.5.0"
+    version "4.5.2"
 
     url "https://cdn.rogueamoeba.com/audiohijack/download/AudioHijack.zip"
 
@@ -24,8 +22,6 @@ cask "audio-hijack" do
       url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=999&bundleid=com.rogueamoeba.audiohijack&platform=osx&version=#{version.no_dots}8000"
       strategy :sparkle
     end
-
-    depends_on macos: ">= :sonoma"
 
     # NOTE: See https://www.rogueamoeba.com/support/knowledgebase/?showCategory=Audio+Hijack
     caveats "Audio Hijack #{version} requires macOS 14.5 or higher."
@@ -36,6 +32,7 @@ cask "audio-hijack" do
   homepage "https://rogueamoeba.com/audiohijack/"
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Audio Hijack.app"
 

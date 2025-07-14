@@ -14,6 +14,8 @@ cask "font-anonymous-pro" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "AnonymousPro-#{version}.001/Anonymous Pro B.ttf"
   font "AnonymousPro-#{version}.001/Anonymous Pro BI.ttf"
   font "AnonymousPro-#{version}.001/Anonymous Pro I.ttf"

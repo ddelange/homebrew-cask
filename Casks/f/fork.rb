@@ -1,6 +1,6 @@
 cask "fork" do
-  version "2.52.0"
-  sha256 "2f363e478e9a15a3885f4285fc8c37f3812d66e6671f642f96712b8a73f6704f"
+  version "2.53.3"
+  sha256 "819f01a21100ab9c2f0044a78230f4f68bbc39be0e946f9a843553c0418a2dc3"
 
   url "https://cdn.fork.dev/mac/Fork-#{version}.dmg"
   name "Fork"
@@ -8,7 +8,7 @@ cask "fork" do
   homepage "https://fork.dev/"
 
   livecheck do
-    url "https://git-fork.com/update/feed.xml"
+    url "https://fork.dev/update/feed-stable.xml"
     strategy :sparkle
   end
 

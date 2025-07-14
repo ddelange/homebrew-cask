@@ -1,6 +1,6 @@
 cask "jbrowse" do
-  version "3.3.0"
-  sha256 "ab66aec5fcad32bab481408aff4a94eda3563241b4cb8f54b9584783f77ed270"
+  version "3.6.2"
+  sha256 "219d5dfd8b03fb127b55793c8277ddf67bfd875e5a9a5fbeb008661be863e3c3"
 
   url "https://github.com/GMOD/jbrowse-components/releases/download/v#{version}/jbrowse-desktop-v#{version}-mac.dmg",
       verified: "github.com/GMOD/jbrowse-components/"

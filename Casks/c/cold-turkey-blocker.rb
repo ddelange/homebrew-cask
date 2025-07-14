@@ -1,5 +1,5 @@
 cask "cold-turkey-blocker" do
-  version "4.6"
+  version "4.7"
   sha256 :no_check
 
   url "https://getcoldturkey.com/files/Cold_Turkey_Mac_Installer.pkg"
@@ -11,6 +11,8 @@ cask "cold-turkey-blocker" do
     url "https://getcoldturkey.com/news/"
     regex(/Blocker\s*v?(\d+(?:\.\d+)+)/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "Cold_Turkey_Mac_Installer.pkg"
 

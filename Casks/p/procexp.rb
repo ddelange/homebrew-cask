@@ -4,6 +4,7 @@ cask "procexp" do
 
   url "https://newosxbook.com/tools/procexp.tgz"
   name "Process Explorer"
+  desc "Jonathan Levin's procexp utility"
   homepage "https://www.newosxbook.com/tools/procexp.html"
 
   livecheck do
@@ -11,8 +12,10 @@ cask "procexp" do
     regex(/v(\d+(?:\.\d+)+)/i)
   end
 
-  binary "procexp.universal", target: "procexp"
-  manpage "procexp.1"
+  depends_on arch: :arm64
+  depends_on macos: ">= :sonoma"
+
+  binary "procexp"
 
   # No zap stanza required
 end

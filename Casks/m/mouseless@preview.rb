@@ -1,6 +1,6 @@
 cask "mouseless@preview" do
-  version "0.4.0-preview.1"
-  sha256 "47a0b63afdcf0c78cfc0ac1ea144a2a272a986bed7f938d7d3c005694b829ab7"
+  version "0.4.0-preview.4"
+  sha256 "2f558b04bc9d352abb1ddb143ea2888948c5bccae11d44340775ce8e8bdcdc07"
 
   url "https://mouseless.click/mouseless-installer_v#{version}.dmg"
   name "mouseless preview channel"

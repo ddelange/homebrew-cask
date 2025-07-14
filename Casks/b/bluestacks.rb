@@ -1,6 +1,6 @@
 cask "bluestacks" do
-  version "5.21.713.7501,d24600ad80ec4d9498f62f3608894309"
-  sha256 "10548b70b892971bf54001967394597b148d36a6bf638af9152ce72e52169200"
+  version "5.21.725.7518,d0b44477d68443e6a604c8e55ac1ee20"
+  sha256 "84d6504742508892aeb002c48cefb1061b47d33b756c1476570800c3d8b6c487"
 
   url "https://ak-build.bluestacks.com/public/app-player/mac/nxt_mac2/#{version.csv.first}/#{version.csv.second}/BlueStacksInstaller_#{version.csv.first}.pkg"
   name "BlueStacks"
@@ -31,6 +31,7 @@ cask "bluestacks" do
             delete:    "/Applications/BlueStacksMIM.app"
 
   zap trash: [
+        "/Users/Shared/Library/Application Support/BlueStacks",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks-support-tool.sfl*",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*",
         "~/Library/BlueStacks",

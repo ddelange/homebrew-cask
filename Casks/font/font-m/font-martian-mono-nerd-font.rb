@@ -11,6 +11,8 @@ cask "font-martian-mono-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "MartianMonoNerdFont-Bold.ttf"
   font "MartianMonoNerdFont-CondensedBold.ttf"
   font "MartianMonoNerdFont-CondensedMedium.ttf"

@@ -1,6 +1,6 @@
 cask "dorico" do
-  version "5.1.81,97b84063-5556-4ef4-b308-15edc4d72339"
-  sha256 "c3cf427d3ddf8e7e9e9f751c7896fe869b14c97cc9a2736ac030dce5be19fa91"
+  version "6.0.22,8b36e0c8-85a8-43ed-811a-d2647770079c"
+  sha256 "75031d9795c6e2ed170c640d0de41487cf996ab95e28cc78a448cf1a88054a79"
 
   url "https://download.steinberg.net/automated_updates/sda_downloads/#{version.csv.second}/Dorico_#{version.csv.first}_Installer_mac.dmg"
   name "Dorico"
@@ -8,8 +8,8 @@ cask "dorico" do
   homepage "https://www.steinberg.net/dorico/"
 
   livecheck do
-    url "https://o.steinberg.net/en/support/downloads/dorico_#{version.csv.first.major}/dorico_pro_#{version.csv.first.major}.html"
-    regex(%r{href=.*?downloads/([^/]+)/Dorico[._-]v?(\d+(?:\.\d+)+)[._-]Installer[._-]mac\.dmg}i)
+    url "https://o.steinberg.net/en/support/downloads/dorico_#{version.csv.first.major}.html"
+    regex(%r{href=.*?downloads/([^/]+)/Dorico[._-]v?(\d+(?:\.\d+)*)[._-]Installer[._-]mac\.dmg}i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
@@ -18,12 +18,13 @@ cask "dorico" do
     end
   end
 
+  auto_updates true
   depends_on cask: [
     "steinberg-activation-manager",
     "steinberg-library-manager",
     "steinberg-mediabay",
   ]
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   pkg "Dorico #{version.csv.first.major}.pkg"
 

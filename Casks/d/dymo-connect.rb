@@ -1,18 +1,22 @@
 cask "dymo-connect" do
-  version "1.4.9.12"
-  sha256 "b2e2714fbe31faea5a046d8acd9770ad46b355168413984d6b4cad54e1573ac6"
+  version "1.5.0.17"
+  sha256 "f31019ccc443872429d20ea3a06a117b92c1660065affc354107160fad89a3b0"
 
   url "https://download.dymo.com/dymo/Software/Mac/DCDMac#{version}.pkg"
   name "Dymo Connect"
   desc "Software for DYMO LabelWriters"
   homepage "https://www.dymo.com/support?cfid=online-support"
 
-  # This can return a page with a CAPTCHA instead of the expected content
-  # (e.g. when the check is run in the homebrew/cask CI environment).
   livecheck do
-    url :homepage
-    regex(/href=.*?DCDMacv?(\d+(?:\.\d+)+)\.pkg/i)
+    url "https://download.dymo.com/Software/dymoconnect/updates/Mac/Updates.xml"
+    strategy :xml do |xml|
+      xml.elements["//DYMOConnect/Version"]&.text&.strip
+    end
   end
+
+  no_autobump! because: :requires_manual_review
+
+  auto_updates true
 
   pkg "DCDMac#{version}.pkg"
 

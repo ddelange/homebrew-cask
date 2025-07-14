@@ -11,6 +11,8 @@ cask "font-bigblue-terminal-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "BigBlueTerm437NerdFont-Regular.ttf"
   font "BigBlueTerm437NerdFontMono-Regular.ttf"
   font "BigBlueTerm437NerdFontPropo-Regular.ttf"

@@ -1,6 +1,6 @@
 cask "qfinder-pro" do
-  version "7.12.2,0407"
-  sha256 "effac6a1824856c83cf4dcc8ea41ac043e9c4ab65401fb6746c3df647b3bed6a"
+  version "7.12.3,0527"
+  sha256 "10b7293bcc351446172adcf4883de8078dae46446c3bb54a77764f9a134a5897"
 
   url "https://download.qnap.com/Storage/Utility/QNAPQfinderProMac-#{version.csv.first}.#{version.csv.second}.dmg"
   name "Qnap Qfinder Pro"
@@ -12,7 +12,7 @@ cask "qfinder-pro" do
     strategy :xml do |xml|
       item = xml.elements[
         "//application[productName[text()='Qfinder']]" \
-        "/platform[platformName[text()='Mac_for_QT']]/software"
+        "/platform[platformName[text()='Mac_for_QT']]/software",
       ]
       next if item.blank?
 

@@ -1,15 +1,21 @@
 cask "tidelift" do
-  version "1.16.13"
-  sha256 "02d303d6d23507d10752508e26d403af190234c1be3e4bf7a170ddeceeb32fed"
+  arch arm: "_arm"
+  os macos: "darwin", linux: "linux"
 
-  url "https://download.tidelift.com/cli/#{version}/darwin_homebrew/tidelift"
+  version "1.16.25"
+  sha256 arm:          "26825cb822188a68f4dbdda56ec82eecad7742091d3838a842cc659d0e22fad7",
+         intel:        "3a821b58e5d032da32131c7ad4b51a7eb9432d071aa52bfdef8a5b47cf85f787",
+         arm64_linux:  "d606b7aaf55a035c4d663d268794a704c650166aedacc601c8d483833eed7222",
+         x86_64_linux: "6f5c097ab082202e71b09cfdfa0d5ad18f30abea963eeed5abc5818d210fbc39"
+
+  url "https://download.tidelift.com/cli/#{version}/#{os}#{arch}/tidelift"
   name "Tidelift CLI"
   desc "Tool to interact with the Tidelift system"
   homepage "https://tidelift.com/cli"
 
   livecheck do
     url "https://download.tidelift.com/cli/index.html"
-    regex(%r{href=.*?/cli/(\d+(?:\.\d+)+)/darwin/tidelift}i)
+    regex(%r{href=.*?/cli/(\d+(?:\.\d+)+)/#{os}#{arch}/tidelift}i)
   end
 
   binary "tidelift"
@@ -19,8 +25,4 @@ cask "tidelift" do
   end
 
   # No zap stanza required
-
-  caveats do
-    requires_rosetta
-  end
 end

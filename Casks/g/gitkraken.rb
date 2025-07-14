@@ -1,18 +1,19 @@
 cask "gitkraken" do
-  arch arm: "darwin-arm64", intel: "darwin"
+  arch arm: "arm64", intel: "x64"
+  livecheck_arch = on_arch_conditional arm: "-arm64"
 
-  version "11.0.0"
-  sha256 arm:   "ce4ae43bb7c182f4fb6d9e8ca888f5039fe26e0ed6b30b4064c6dad03964b9d0",
-         intel: "6d6ca0c201d977fb57ca122efda46d3f8e6b540f1b979f9ea2fd5ca344174b74"
+  version "11.2.1"
+  sha256 arm:   "844632bc324fa8a7931b77135a31a8d3219545f37115ea1ea9364700e1c69075",
+         intel: "bf508db84f98974f4ecae215ad184bc8126d6dbc626dfad19eeed8557633873b"
 
-  url "https://release.axocdn.com/#{arch}/GitKraken-v#{version}.zip",
-      verified: "release.axocdn.com/"
+  url "https://api.gitkraken.dev/releases/production/darwin/#{arch}/#{version}/GitKraken-v#{version}.zip",
+      verified: "api.gitkraken.dev/releases/production/"
   name "GitKraken"
   desc "Git client focusing on productivity"
   homepage "https://www.gitkraken.com/"
 
   livecheck do
-    url "https://release.axocdn.com/#{arch}/RELEASES?v=0.0.0&darwin=999"
+    url "https://release.gitkraken.com/darwin#{livecheck_arch}/RELEASES?v=0.0.0&darwin=999"
     strategy :json do |json|
       json["name"]
     end

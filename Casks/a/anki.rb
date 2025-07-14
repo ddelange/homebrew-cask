@@ -12,12 +12,23 @@ cask "anki" do
       skip "Legacy version"
     end
   end
-  on_big_sur :or_newer do
-    version "25.02.4"
-    sha256 arm:   "e5cc1ca0ac696de1a805633fe3ada5a08f61c142a0ea2417e958ecc08f2703b5",
-           intel: "d82e00132d7c90fe25dae391a85cfba50be2e3098ba98172281249336e832332"
+  on_big_sur do
+    version "25.02.7"
+    sha256 arm:   "b2df44bf951404e1d5d56150ee50e158ca5dfd77416b442ed02218348bf1a43b",
+           intel: "0d7eb9781596e44c0a833df71c6948706b97c4e89e8bdb315707de33c33c6052"
 
     url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac-#{arch}-qt6.dmg",
+        verified: "github.com/ankitects/anki/"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
+    version "25.07.2"
+    sha256 "f29a049dd8a31bb9bdc20e8579d6196acf318eb1a21a832b418f7111242bcad9"
+
+    url "https://github.com/ankitects/anki/releases/download/#{version}/anki-mac.dmg",
         verified: "github.com/ankitects/anki/"
 
     livecheck do

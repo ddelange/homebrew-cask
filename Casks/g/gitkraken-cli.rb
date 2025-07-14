@@ -1,9 +1,9 @@
 cask "gitkraken-cli" do
   arch arm: "darwin_arm64", intel: "darwin_amd64"
 
-  version "3.0.4"
-  sha256 arm:   "da780a05136658576185ebdca8814a6e90fa8b7764e6d22a43a5237185d82aa2",
-         intel: "4ee6d200a052cbdf00cf005eb0fd348f1b026a82fe26bbb2a37556b3d9eb33b0"
+  version "3.1.4"
+  sha256 arm:   "67afe655bd0e14ede370c14b0ceb325e76159b2334dde28d08630d5a9b793051",
+         intel: "e6167725f2fdf01bdd50d38efd27157a4cdfdb20c3b9d72f6673d4e621c3dfcb"
 
   url "https://github.com/gitkraken/gk-cli/releases/download/v#{version}/gk_#{version}_#{arch}.zip"
   name "GitKraken CLI"

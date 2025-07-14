@@ -1,6 +1,6 @@
 cask "svp" do
-  version "4.6.294"
-  sha256 "95e6eac4d921a60476bd46d87b77b47e0bfe5f58425d730e0f94aa0d747672d9"
+  version "4.7.300-1"
+  sha256 "1734dc690929a88953f6abc70f0b0b825c4a097e37ef55ccec515ac228c38d23"
 
   url "https://www.svp-team.com/files/svp#{version.major}-mac.#{version}.dmg"
   name "SVP #{version.major} Mac"
@@ -9,8 +9,11 @@ cask "svp" do
 
   livecheck do
     url "https://www.svp-team.com/files/svp#{version.major}-latest.php?mac"
+    regex(/svp\d+[._-]mac[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
     strategy :header_match
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :mojave"
 

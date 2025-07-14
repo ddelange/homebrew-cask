@@ -1,6 +1,6 @@
 cask "lm-studio" do
-  version "0.3.15,11"
-  sha256 "062e546d94747c3605fb1f66b456aa66c39967580c40024df884bf493ff95a47"
+  version "0.3.18,3"
+  sha256 "53bdb40d89f2c2eab366e61ec330d222a2a8039f8057b22cba9990c31386f389"
 
   url "https://installers.lmstudio.ai/darwin/arm64/#{version.tr(",", "-")}/LM-Studio-#{version.tr(",", "-")}-arm64.dmg"
   name "LM Studio"

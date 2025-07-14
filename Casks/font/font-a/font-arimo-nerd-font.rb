@@ -11,6 +11,8 @@ cask "font-arimo-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "ArimoNerdFont-Bold.ttf"
   font "ArimoNerdFont-BoldItalic.ttf"
   font "ArimoNerdFont-Italic.ttf"

@@ -1,6 +1,6 @@
 cask "tdr-prism" do
-  version "1.0.7"
-  sha256 "627447da3fc7c8775d0ee93729482fd03b4ca0073a3acac3fae473c1018e5849"
+  version "1.1.1"
+  sha256 "10f2ce6fd6dda58ac924be2596e5641d8bb3f04687df9983d97a0ab28b0b2228"
 
   url "https://www.tokyodawn.net/labs/Prism/#{version}/TDR%20Prism.zip"
   name "TDR Prism"
@@ -11,6 +11,8 @@ cask "tdr-prism" do
     url :homepage
     regex(%r{href=.*?Prism/v?(\d+(?:\.\d+)+)/TDR(%20|\s)Prism\.zip}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "TDR Prism.pkg"
 

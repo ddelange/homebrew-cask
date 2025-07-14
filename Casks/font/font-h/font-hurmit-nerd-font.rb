@@ -11,6 +11,8 @@ cask "font-hurmit-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "HurmitNerdFont-Bold.otf"
   font "HurmitNerdFont-BoldItalic.otf"
   font "HurmitNerdFont-Italic.otf"

@@ -1,6 +1,6 @@
 cask "nosqlbooster-for-mongodb" do
-  version "10.0.1"
-  sha256 "bf5236c3513855bbfa34ac484a7b950fa0933edf771a56dd7ec72d40d80ae428"
+  version "10.0.4"
+  sha256 "2754461f0504096a08eee7a8f3341ffb4877b872c1043abbdb3cbee2e8d664dc"
 
   url "https://s3.nosqlbooster.com/download/releasesv#{version.major}/nosqlbooster4mongo-#{version}.dmg"
   name "NoSQLBooster for MongoDB"

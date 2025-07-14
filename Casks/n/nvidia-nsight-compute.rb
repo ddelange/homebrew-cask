@@ -1,9 +1,9 @@
 cask "nvidia-nsight-compute" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2025.1.1.2-35528883"
-  sha256 arm:   "511244370c753c4f96c28638fe3324c274cfa676b6a8049531d0320f8b0a7c84",
-         intel: "0869ddcdf422ba581c70538de5903cd1442bccb7c49e6406cc3783540e269838"
+  version "2025.2.1.3-35987062"
+  sha256 arm:   "85764bfc49dadc0f9c44a5c408e84e978637df38699e8504a260ee809c42f340",
+         intel: "83db44f91e4aaf5f54f1f756c1c6120e7ed289293d1e735ca76ce8b7ce722642"
 
   url "https://developer.nvidia.com/downloads/assets/tools/secure/nsight-compute/#{version.major_minor_patch.dots_to_underscores}/nsight-compute-mac-#{arch}-#{version}.dmg"
   name "NVIDIA Nsight Compute"
@@ -31,5 +31,8 @@ cask "nvidia-nsight-compute" do
 
   app "NVIDIA Nsight Compute.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Application Support/NVIDIA Corporation/NVIDIA Nsight Compute",
+    "~/Library/Preferences/com.nvidia.devtools.Rebel.plist",
+  ]
 end

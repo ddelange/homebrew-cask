@@ -1,9 +1,9 @@
 cask "anka-build-cloud-registry" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.46.1-f1e9637c"
-  sha256 arm:   "4242810ea80a6816a94d248adeaa14a825290d6dc3deb727d795652e10e08e2f",
-         intel: "d5039bbdf3f7f7a72215d37781caed1bc0962a7fb7623a6777f0b212bac1e7cc"
+  version "1.48.0-067b4c29"
+  sha256 arm:   "525343aa5dff3ecfd9dd46390a4407768c41ec483cb20625edf170ef00bfd2cf",
+         intel: "c9e1d0cffdee0d1e0e08a6ac40f2e2b446e78b3c27cd9235b134b6d3f977c375"
 
   url "https://downloads.veertu.com/anka/anka-registry-#{arch}-#{version}.pkg"
   name "Anka Build Cloud Controller"
@@ -15,6 +15,8 @@ cask "anka-build-cloud-registry" do
     regex(/anka-registry-#{arch}[._-]?v?(\d+(?:\.\d+)*[._-]\h+)\.pkg/i)
     strategy :header_match
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "anka-registry-#{arch}-#{version}.pkg"
 

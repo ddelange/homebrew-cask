@@ -1,14 +1,9 @@
 cask "ossia-score" do
   arch arm: "AppleSilicon", intel: "Intel"
 
-  on_arm do
-    version "3.5.1"
-    sha256 "4c68eee0d0b1f33e6ff4c03c9722b53b778bcc6bc58b97480ed465532d66264b"
-  end
-  on_intel do
-    version "3.5.1"
-    sha256 "55349c1654962b92879f57fdef2e4d3a24d1c6ce9ea58d10a1ec617fbfda8c68"
-  end
+  version "3.5.3"
+  sha256 arm:   "e24b3e3e7a73bed5615451a18bbea7aec21653dbc1067c198dfa040a31bc16c5",
+         intel: "1bfa625467468c99c2ac0f5ec166bdd3201db2d894ffc26a34485fdf9eaedbf2"
 
   url "https://github.com/ossia/score/releases/download/v#{version}/ossia.score-#{version}-macOS-#{arch}.dmg",
       verified: "github.com/ossia/score/"

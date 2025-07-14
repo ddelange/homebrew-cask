@@ -1,14 +1,14 @@
 cask "font-server-mono" do
-  version "0.0.6"
-  sha256 "07d2eff6a11b9939b0d397198bec9258da6b43660d6f0fa8814e543f617d2b82"
+  version "0.1.0"
+  sha256 "8434a24aafaa6e78ae23a0f9e906bb44585012ccd3010843003c6e7290c8e5ae"
 
-  url "https://github.com/internet-development/www-server-mono/archive/refs/tags/#{version}.tar.gz",
+  url "https://github.com/internet-development/www-server-mono/releases/download/v#{version}/ServerMono-fonts.zip",
       verified: "github.com/internet-development/www-server-mono/"
   name "Server Mono"
   homepage "https://servermono.com/"
 
-  font "www-server-mono-#{version}/fonts/ServerMono-Regular-Italic.otf"
-  font "www-server-mono-#{version}/fonts/ServerMono-Regular.otf"
+  font "public/fonts/ServerMono-Regular.otf"
+  font "public/fonts/ServerMono-RegularOblique.otf"
 
   # No zap stanza required
 end

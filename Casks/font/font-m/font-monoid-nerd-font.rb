@@ -11,6 +11,8 @@ cask "font-monoid-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "MonoidNerdFont-Bold.ttf"
   font "MonoidNerdFont-Italic.ttf"
   font "MonoidNerdFont-Regular.ttf"

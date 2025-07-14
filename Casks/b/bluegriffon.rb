@@ -7,7 +7,10 @@ cask "bluegriffon" do
   desc "Web and EPUB editor"
   homepage "http://bluegriffon.org/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-06-28", because: :discontinued
+  disable! date: "2025-06-29", because: :discontinued
 
   app "BlueGriffon.app"
 

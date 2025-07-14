@@ -13,6 +13,8 @@ cask "ipartition" do
   desc "Disk partitioning tool"
   homepage "https://coriolis-systems.com/iPartition/"
 
+  no_autobump! because: :requires_manual_review
+
   disable! date: "2024-12-16", because: :discontinued
 
   depends_on macos: "<= :high_sierra"
@@ -20,8 +22,4 @@ cask "ipartition" do
   app "iPartition.app"
 
   zap trash: "~/Library/Preferences/com.coriolis-systems.iPartition.plist"
-
-  caveats do
-    requires_rosetta
-  end
 end

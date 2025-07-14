@@ -17,6 +17,8 @@ cask "font-kanjistrokeorders" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "KanjiStrokeOrders_v#{version.before_comma}.ttf"
 
   caveats do

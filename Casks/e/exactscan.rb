@@ -1,6 +1,6 @@
 cask "exactscan" do
-  version "24.6"
-  sha256 "c76827b04ff5e6ea023f0438a31322876ca947c481c6d90e705add739296d303"
+  version "25.1"
+  sha256 "1edac4216a879790e496ed862137ad4c19daf7a30e48cce826a77eab82dd676b"
 
   url "https://dl.exactcode.com/exactscan/ExactScan-#{version}.dmg",
       verified: "dl.exactcode.com/"
@@ -12,6 +12,8 @@ cask "exactscan" do
     url "https://exactscan.com/download.html"
     regex(%r{href=.*?/ExactScan-(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "ExactScan.app"
 

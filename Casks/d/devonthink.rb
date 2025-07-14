@@ -3,13 +3,19 @@ cask "devonthink" do
     version "3.9.6"
     sha256 "e272af94a61619adaf729de336e1ef24465a5e6ff27ed6ae8cb11d28ca35638a"
 
+    url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
+
     livecheck do
       skip "Legacy version"
     end
+
+    app "DEVONthink #{version.major}.app"
   end
   on_big_sur :or_newer do
-    version "3.9.9"
-    sha256 "718bb6dd403e93a77b5902f243da5f0103fbc5d7962949df3a8b6ba28cdf368e"
+    version "4.0.2"
+    sha256 "918cf167d8cf7533c657b019f886fa3d55a46632da1a57ab75f9c28d749427ce"
+
+    url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink.app.zip"
 
     # The appcast may include unstable versions where upstream doesn't specify a
     # separate channel, so we have to identify stable versions using a regex.
@@ -20,17 +26,18 @@ cask "devonthink" do
         items.map { |item| item.version[regex, 1] }
       end
     end
+
+    app "DEVONthink.app"
   end
 
-  url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
   name "DEVONthink"
   desc "Collect, organise, edit and annotate documents"
   homepage "https://www.devontechnologies.com/apps/devonthink"
 
+  no_autobump! because: :requires_manual_review
+
   auto_updates true
   depends_on macos: ">= :mojave"
-
-  app "DEVONthink #{version.major}.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.devon-technologies.*",

@@ -1,6 +1,6 @@
 cask "rapidminer-studio" do
-  version "2025.0.1"
-  sha256 "abc0d19a433d6c736bbb9981435bd95aadc3ceb5f7483e6f25f0ee3837e25775"
+  version "2025.1.1"
+  sha256 "d6071ffcd9e800baa63d1ed0a572b66d255fc193ad4c8508f438f4f551f953a1"
 
   url "https://releases.rapidminer.com/archive/rapidminer-studio/#{version}/ai-studio-osx-#{version}.dmg"
   name "RapidMiner Studio"
@@ -11,6 +11,8 @@ cask "rapidminer-studio" do
     url "https://releases.rapidminer.com/latest/rapidminer-studio/rapidminer-studio-osx.dmg"
     strategy :header_match
   end
+
+  no_autobump! because: :requires_manual_review
 
   app "AI Studio #{version}.app"
 

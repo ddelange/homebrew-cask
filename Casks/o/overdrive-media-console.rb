@@ -8,7 +8,10 @@ cask "overdrive-media-console" do
   desc "Get eBooks, audiobooks, and videos from your local library"
   homepage "https://www.overdrive.com/"
 
+  no_autobump! because: :requires_manual_review
+
   deprecate! date: "2024-07-04", because: :discontinued
+  disable! date: "2025-07-04", because: :discontinued
 
   pkg "OverDrive-Mac-Installer.pkg"
 

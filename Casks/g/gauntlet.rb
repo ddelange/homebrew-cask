@@ -1,11 +1,13 @@
 cask "gauntlet" do
-  version "18"
-  sha256 "5e69a19b95cd92634e5baf35cd1947ac2847099395a1a8228ba9f29608a81b24"
+  version "20"
+  sha256 "86bfad8a08ce24651cbc551ddd2d877d7917e622611b5d62bcc4d16b21c9fa9d"
 
   url "https://github.com/project-gauntlet/gauntlet/releases/download/v#{version}/gauntlet-universal-macos.dmg"
   name "Gauntlet"
   desc "Open-source cross-platform application launcher"
   homepage "https://github.com/project-gauntlet/gauntlet"
+
+  no_autobump! because: :requires_manual_review
 
   app "Gauntlet.app"
 

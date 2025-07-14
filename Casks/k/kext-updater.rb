@@ -1,5 +1,5 @@
 cask "kext-updater" do
-  version "5.0.3"
+  version "5.0.5"
   sha256 :no_check
 
   url "https://update.kextupdater.de/kextupdater/kextupdaterng.zip"
@@ -11,6 +11,8 @@ cask "kext-updater" do
     url "https://update.kextupdater.de/kextupdater/appcastng.xml"
     strategy :sparkle, &:short_version
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

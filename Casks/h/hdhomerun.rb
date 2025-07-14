@@ -1,6 +1,6 @@
 cask "hdhomerun" do
-  version "20231214"
-  sha256 "fbc47a735016faa3d73103915b9b2c4aa34ebd1642273e6a948ae7389815a4f5"
+  version "20250623"
+  sha256 "eb03a672da71d99e3541d1b9a4ab5f87559af38135eef9c0f1630f8568cacd9c"
 
   url "https://download.silicondust.com/hdhomerun/hdhomerun_mac_#{version}.dmg"
   name "HDHomeRun"
@@ -11,6 +11,8 @@ cask "hdhomerun" do
     url "https://download.silicondust.com/hdhomerun/hdhomerun_mac.dmg"
     strategy :header_match
   end
+
+  no_autobump! because: :requires_manual_review
 
   pkg "HDHomeRun Installer.pkg"
 

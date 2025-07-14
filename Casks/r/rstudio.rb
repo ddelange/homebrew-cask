@@ -1,6 +1,6 @@
 cask "rstudio" do
-  version "2024.12.1,563"
-  sha256 "be73d3a92a8b05223180b5c4a92773b20baa5b8f1b9e287f696152b41f52035a"
+  version "2025.05.1,513"
+  sha256 "76e1538b94762b5bc01ce4918496764a50b2e6017cfb7a63dd5debd191491621"
 
   url "https://download1.rstudio.org/electron/macos/RStudio-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "download1.rstudio.org/electron/macos/"
@@ -29,7 +29,7 @@ cask "rstudio" do
   caveats <<~EOS
     #{token} depends on R. The R Project provides official binaries:
 
-      brew install --cask r
+      brew install --cask r-app
 
     Alternatively, the Homebrew-compiled version of R omits the GUI app:
 

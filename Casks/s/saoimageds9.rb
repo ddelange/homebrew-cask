@@ -1,7 +1,6 @@
 cask "saoimageds9" do
-  arch arm: "arm64", intel: "x86"
-
   # NOTE: "9" is not a version number, but an intrinsic part of the product name
+  arch arm: "arm64", intel: "x86"
 
   on_big_sur do
     version "8.5"
@@ -36,6 +35,8 @@ cask "saoimageds9" do
     url "https://sites.google.com/cfa.harvard.edu/saoimageds9/download"
     regex(/href=.*?SAOImageDS9%20v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :big_sur"
 

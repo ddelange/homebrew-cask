@@ -11,6 +11,8 @@ cask "font-lilex-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "LilexNerdFont-Bold.ttf"
   font "LilexNerdFont-BoldItalic.ttf"
   font "LilexNerdFont-ExtraLight.ttf"

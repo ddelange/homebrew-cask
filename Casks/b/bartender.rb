@@ -4,8 +4,8 @@ cask "bartender" do
     sha256 "f1a2ecf300cf56aaf531324cba646442026cb0b63b4f90f46a1aee5b0804688a"
   end
   on_sonoma :or_newer do
-    version "5.3.5"
-    sha256 "2437714be976e201e36e8c8c7ccb28b83fc695f6e4e9ca146d1fd4b82f884b64"
+    version "5.3.7"
+    sha256 "20f640c4f43397dd8f16fd829597e3c93f330c91fb29ccd207133b69d4aa0baa"
   end
 
   url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip"
@@ -20,6 +20,8 @@ cask "bartender" do
       item.url.scan(regex)&.map { |match| match[0].tr("-", ".") }
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :big_sur"

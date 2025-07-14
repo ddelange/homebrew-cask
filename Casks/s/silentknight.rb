@@ -8,8 +8,8 @@ cask "silentknight" do
     end
   end
   on_catalina :or_newer do
-    version "2.11,2024.09"
-    sha256 "083fe1d6afe5aa9700cc113f03e7d2f219397cf5da2a1906c1f56ea60062a6e2"
+    version "2.12,2025.06"
+    sha256 "84eb2feb1e4d0ac26f28f963bf809e6d6206b5d345d9d9c428bdbc583b249f76"
 
     livecheck do
       url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
@@ -40,6 +40,8 @@ cask "silentknight" do
   name "SilentKnight"
   desc "Automatically checks computer's security"
   homepage "https://eclecticlight.co/lockrattler-systhist/"
+
+  no_autobump! because: :requires_manual_review
 
   app "silentknight#{no_dot_version}/SilentKnight.app"
 

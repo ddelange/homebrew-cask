@@ -1,9 +1,9 @@
 cask "openchrom" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.5.7"
-  sha256 arm:   "daae97b92c351b99935f440ed1ca3aef5d0826844fab817f35f2cbecdb839a10",
-         intel: "f56008467f8833bb5af6c8a1c747823668e59d383c88c75a66224c7899ab335c"
+  version "1.5.17"
+  sha256 arm:   "0e3ed5f0275ab16328ef7d0b68c5243224a66493ada913fe73de79a2789bae31",
+         intel: "7b2a8f837a540501f1c7fbe7005a41109525b77052be8bbdf18c8041e9e96aaa"
 
   url "https://products.lablicate.com/openchrom/#{version}/OpenChrom_#{version}_#{arch}.dmg",
       verified: "products.lablicate.com/openchrom/"
@@ -20,6 +20,8 @@ cask "openchrom" do
       end
     end
   end
+
+  no_autobump! because: :bumped_by_upstream
 
   app "OpenChrom.app"
 

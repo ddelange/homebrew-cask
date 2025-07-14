@@ -11,6 +11,8 @@ cask "font-terminess-ttf-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "TerminessNerdFont-Bold.ttf"
   font "TerminessNerdFont-BoldItalic.ttf"
   font "TerminessNerdFont-Italic.ttf"

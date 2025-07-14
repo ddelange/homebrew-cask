@@ -17,6 +17,8 @@ cask "font-brill" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "Brill-Bold.ttf"
   font "Brill-BoldItalic.ttf"
   font "Brill-Italic.ttf"

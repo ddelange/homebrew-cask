@@ -20,6 +20,8 @@ cask "font-linux-libertine" do
     end
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "LinLibertine_DRah.ttf"
   font "LinLibertine_I.ttf"
   font "LinLibertine_Mah.ttf"

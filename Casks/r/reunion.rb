@@ -1,6 +1,6 @@
 cask "reunion" do
-  version "14.0.0,250331unr"
-  sha256 "3b4ea0410100fd1a47e3364cd206bc099502be86225fe31812a72869a2be5ad4"
+  version "14.0.0,250702unr"
+  sha256 "fb40f2b244b1af9436a17f770531dc7b8a68cc847b467257a0eeaa7602bb8693"
 
   url "https://store.leisterpro.com/updates/reunion#{version.major}/Reunion-#{version.csv.first.dots_to_hyphens}-#{version.csv.second}.zip"
   name "Reunion"
@@ -16,6 +16,8 @@ cask "reunion" do
       end
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
 

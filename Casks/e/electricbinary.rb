@@ -1,6 +1,6 @@
 cask "electricbinary" do
-  version "9.08"
-  sha256 "7a8fbe5fac60989659a5197eabb4a1dac53a675adfa12c26c98a7d1089aeeb97"
+  version "9.08.1"
+  sha256 "fcfd8b543aa0124f764945f2eba3a2c76dd7bd8db403dee2b1a3ddbc70875e5a"
 
   url "https://ftp.gnu.org/gnu/electric/electricBinary-#{version}.jar"
   name "Electric VLSI Design System"
@@ -11,6 +11,8 @@ cask "electricbinary" do
     url :url
     regex(/href=.*?electricBinary[._-]v?(\d+(?:\.\d+)+)\.jar/i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   container type: :naked
 

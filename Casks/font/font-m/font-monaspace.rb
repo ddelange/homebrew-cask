@@ -12,6 +12,8 @@ cask "font-monaspace" do
     strategy :github_latest
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "monaspace-v#{version}/fonts/frozen/MonaspaceArgonFrozen-Bold.ttf"
   font "monaspace-v#{version}/fonts/frozen/MonaspaceArgonFrozen-BoldItalic.ttf"
   font "monaspace-v#{version}/fonts/frozen/MonaspaceArgonFrozen-ExtraBold.ttf"

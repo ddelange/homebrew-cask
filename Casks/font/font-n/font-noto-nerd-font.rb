@@ -11,6 +11,8 @@ cask "font-noto-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "NotoMonoNerdFont-Regular.ttf"
   font "NotoMonoNerdFontMono-Regular.ttf"
   font "NotoMonoNerdFontPropo-Regular.ttf"

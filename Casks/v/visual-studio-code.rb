@@ -11,9 +11,9 @@ cask "visual-studio-code" do
     end
   end
   on_big_sur :or_newer do
-    version "1.99.3"
-    sha256 arm:   "caa36137ea1b46c594cea880d0836345d79e7de4f8b3826f184ed297fed78128",
-           intel: "86a71c5cddd50268a74d125dd7def2fd7b9e70ab3c588ec47ad05be0e29bcefb"
+    version "1.102.0"
+    sha256 arm:   "59d626968a5e56c1429dd9d300b2a2420c763b8cf3903b68b51fea8fb039e9b6",
+           intel: "75ea52a4f666e9b310bfdcaf2d427ac9a702c130ed729a05bb5e5bebba221496"
 
     livecheck do
       url "https://update.code.visualstudio.com/api/update/#{arch}/stable/latest"
@@ -35,6 +35,7 @@ cask "visual-studio-code" do
 
   app "Visual Studio Code.app"
   binary "#{appdir}/Visual Studio Code.app/Contents/Resources/app/bin/code"
+  binary "#{appdir}/Visual Studio Code.app/Contents/Resources/app/bin/code-tunnel"
 
   uninstall launchctl: "com.microsoft.VSCode.ShipIt",
             quit:      "com.microsoft.VSCode"

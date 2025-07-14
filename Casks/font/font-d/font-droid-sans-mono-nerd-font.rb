@@ -11,6 +11,8 @@ cask "font-droid-sans-mono-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "DroidSansMNerdFont-Regular.otf"
   font "DroidSansMNerdFontMono-Regular.otf"
   font "DroidSansMNerdFontPropo-Regular.otf"

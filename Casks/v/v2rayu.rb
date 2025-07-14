@@ -1,9 +1,9 @@
 cask "v2rayu" do
   arch arm: "arm64", intel: "64"
 
-  version "4.2.5"
-  sha256 arm:   "dbc04765b0fb6b4e46e3bfdf737548286d3b5ca228a74514dca10e4428a153ed",
-         intel: "e61e1a52d7868fedb186b2b053f5700c4071a3afb088d53846804a9487d2f8e5"
+  version "4.2.6"
+  sha256 arm:   "f3d76886d7c2122f8911c314263c951051c52756b368e3b88545ebcd4075e474",
+         intel: "3c5d48c28f4c213995fecdd9ab6737977a132013c454619d979f9aa654c1f430"
 
   url "https://github.com/yanue/V2rayU/releases/download/v#{version}/V2rayU-#{arch}.dmg"
   name "V2rayU"
@@ -16,6 +16,8 @@ cask "v2rayu" do
     url :url
     strategy :github_latest
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :big_sur"

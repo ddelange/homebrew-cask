@@ -1,6 +1,6 @@
 cask "weiyun" do
-  version "5.2.1498"
-  sha256 "dab41f375b026d1c0271cf2b33f71aec7348b8daf3c4aade8cb6e531dde20474"
+  version "5.2.1523"
+  sha256 "c4998ff4264705efeae6c8d49c650b9fd29c9fb83d70dc12ed4247d6ba4462c5"
 
   url "https://dldir1.qq.com/weiyun/electron-update/release/#{version}/Weiyun-mac-x64-#{version}.dmg",
       verified: "dldir1.qq.com/weiyun/"
@@ -14,6 +14,8 @@ cask "weiyun" do
       json.dig("electron_mac", "version")
     end
   end
+
+  no_autobump! because: :requires_manual_review
 
   depends_on macos: ">= :high_sierra"
 

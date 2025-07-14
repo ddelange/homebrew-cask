@@ -1,5 +1,5 @@
 cask "master-pdf-editor" do
-  version "5.9.89"
+  version "5.9.90"
   sha256 :no_check
 
   url "https://code-industry.net/public/MasterPDFEditor.dmg"
@@ -11,6 +11,8 @@ cask "master-pdf-editor" do
     url "https://code-industry.net/get-masterpdfeditor/"
     regex(%r{>Version\s(\d+(?:\.\d+)+).*?macOS.*?</h}i)
   end
+
+  no_autobump! because: :requires_manual_review
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

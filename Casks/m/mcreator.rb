@@ -1,9 +1,9 @@
 cask "mcreator" do
   arch arm: "aarch64", intel: "64bit"
 
-  version "2025.1.13416"
-  sha256 arm:   "d6ffca2255709369ce6c27cb1cb782536a54499f8bc803e1010fec0cbbc1a6c5",
-         intel: "e4cdb69c7f65faec0315abc14ae90c26387a953a9687278a77f039f45495709f"
+  version "2025.2.28610"
+  sha256 arm:   "3c64971ab4415f6891d308256731e2747f97c46f6a1086e5ffcadacb2ea6cbf3",
+         intel: "6f2922e16a4b025da084c533a57bb57f95ba29e7ecbdc169c1bb535572bf8776"
 
   url "https://github.com/MCreator/MCreator/releases/download/#{version}/MCreator.#{version.major_minor}.Mac.#{arch}.dmg",
       verified: "github.com/MCreator/MCreator/"

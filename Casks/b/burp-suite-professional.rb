@@ -1,9 +1,9 @@
 cask "burp-suite-professional" do
   arch arm: "MacOsArm64", intel: "MacOsx"
 
-  version "2025.3.3"
-  sha256 arm:   "31c9b2258dae4c43d9d14f49a33287f594c579e7939a95bc7b17ec84a0a05cc4",
-         intel: "4b209066de8489851a26b8828b97c91346bcda55ad8095ff469e4c143611ab75"
+  version "2025.5.6"
+  sha256 arm:   "f9cf261b42a8c6843abb8f0b83eb4c1350a6ea27162c19911d76ad8e29e0ac66",
+         intel: "4734fb120d094b45f2f262f88270b532ad42d5ae71f69ad2ee22b71e92b0325b"
 
   url "https://portswigger-cdn.net/burp/releases/download?product=pro&version=#{version}&type=#{arch}",
       verified: "portswigger-cdn.net/burp/releases/"
@@ -27,6 +27,9 @@ cask "burp-suite-professional" do
       end
     end
   end
+
+  conflicts_with cask: "burp-suite-professional@early-adopter"
+  depends_on macos: ">= :catalina"
 
   app "Burp Suite Professional.app"
 

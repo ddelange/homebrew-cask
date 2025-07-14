@@ -11,6 +11,8 @@ cask "font-code-new-roman-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "CodeNewRomanNerdFont-Bold.otf"
   font "CodeNewRomanNerdFont-Italic.otf"
   font "CodeNewRomanNerdFont-Regular.otf"

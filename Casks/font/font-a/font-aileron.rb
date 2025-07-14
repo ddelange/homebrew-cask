@@ -11,6 +11,8 @@ cask "font-aileron" do
     regex(/Version.*?(\d+(?:\.\d+)*)/i)
   end
 
+  no_autobump! because: :requires_manual_review
+
   font "Aileron-Black.otf"
   font "Aileron-BlackItalic.otf"
   font "Aileron-Bold.otf"

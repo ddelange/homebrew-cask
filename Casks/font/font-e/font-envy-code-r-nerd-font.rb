@@ -11,6 +11,8 @@ cask "font-envy-code-r-nerd-font" do
     strategy :github_latest
   end
 
+  no_autobump! because: :bumped_by_upstream
+
   font "EnvyCodeRNerdFont-Bold.ttf"
   font "EnvyCodeRNerdFont-Italic.ttf"
   font "EnvyCodeRNerdFont-Regular.ttf"

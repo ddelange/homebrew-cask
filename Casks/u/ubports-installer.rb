@@ -1,8 +1,11 @@
 cask "ubports-installer" do
-  version "0.10.0"
-  sha256 "1a9e1bb64c8a714e239a985a521e7ca38b46a77bfc3c80adbf938e3078d51c2f"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/ubports/ubports-installer/releases/download/#{version}/ubports-installer_#{version}_mac_x64.dmg",
+  version "0.11.2"
+  sha256 arm:   "21f40396f8f8d1b0da9b3b7b029cd6d15988603c64cdfceb5d9ba1eb4232cd3c",
+         intel: "cd5532fff5c2a35e04f55b6b0ad03918404bfbaa1065e54a87cf9fb69609807b"
+
+  url "https://github.com/ubports/ubports-installer/releases/download/#{version}/ubports-installer_#{version}_mac_#{arch}.dmg",
       verified: "github.com/ubports/ubports-installer/"
   name "ubports installer"
   desc "Application to install ubports on mobile devices"
@@ -14,7 +17,9 @@ cask "ubports-installer" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
+  no_autobump! because: :requires_manual_review
+
+  depends_on macos: ">= :big_sur"
 
   app "ubports-installer.app"
 
@@ -23,8 +28,4 @@ cask "ubports-installer" do
     "~/Library/Preferences/com.ubports.installer.plist",
     "~/Library/Saved Application State/com.ubports.installer.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end

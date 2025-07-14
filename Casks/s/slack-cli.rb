@@ -1,12 +1,12 @@
 cask "slack-cli" do
-  version "3.0.5"
-  sha256 "07a66552f9c3a23b76a472e00a1f0ebefa327c67bab75035cfedb61971f5b4c9"
+  version "3.5.0"
+  sha256 "e0978fcbfd52f29b105fe61a4f9d803a105ff218d39fbcbc14947145fa2008a2"
 
   url "https://downloads.slack-edge.com/slack-cli/slack_cli_#{version}_macOS_64-bit.tar.gz",
       verified: "downloads.slack-edge.com/slack-cli/"
   name "Slack CLI"
   desc "CLI to create, run, and deploy Slack apps"
-  homepage "https://api.slack.com/future/tools/cli"
+  homepage "https://tools.slack.dev/slack-cli/"
 
   livecheck do
     url "https://api.slack.com/slackcli/metadata.json"
@@ -20,7 +20,4 @@ cask "slack-cli" do
   binary "bin/slack"
 
   # No zap stanza required
-  caveats do
-    requires_rosetta
-  end
 end

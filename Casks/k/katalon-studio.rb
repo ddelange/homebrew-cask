@@ -1,9 +1,9 @@
 cask "katalon-studio" do
   arch arm: "%20Arm64"
 
-  version "10.2.0"
-  sha256 arm:   "56395ce0b04c6dc429c58c0c2e6dc3920cd62c1035a9ab18f39b03f81b9a05dd",
-         intel: "bdf503b85e861523093d0fb4a3ace075a5c9349d62eb3b54f49205f54a9ef136"
+  version "10.2.4"
+  sha256 arm:   "b198e3e9e8bcdcbf4093b56d6df85a857223100b82385f7cecdc5c81b4e54fe6",
+         intel: "cd8028aacf3157f3994311e009ba19849ef5f27059d9fcec26a0e6bdcb0fd6cb"
 
   url "https://download.katalon.com/free/#{version}/release/Katalon%20Studio#{arch}.dmg"
   name "Katalon Studio"

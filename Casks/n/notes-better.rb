@@ -8,6 +8,15 @@ cask "notes-better" do
   desc "Simple note-taking app for markdown and kanban"
   homepage "https://get-notes.com/"
 
+  livecheck do
+    url "https://raw.githubusercontent.com/nuttyartist/notes/master/UPDATES_FOSS.json"
+    strategy :json do |json|
+      json.dig("updates", "osx", "latest-version")
+    end
+  end
+
+  no_autobump! because: :requires_manual_review
+
   depends_on macos: ">= :big_sur"
 
   app "Notes Better.app"
